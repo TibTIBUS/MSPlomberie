@@ -57,3 +57,5 @@ Photos de chantiers et supports transmis par Thibaut pour ce projet. Versions or
 Le site ne prévoit plus de page Facebook. L’email public est toujours `msplomberie50@hotmail.com` ; les futurs envois de test restent destinés exclusivement à Localia. Illustration solaire et libellé séparés. Carte vectorielle animée Manche / Calvados avec départ à Périers et villes citées ; il ne s’agit ni d’une limite contractuelle de desserte ni d’un itinéraire routier. Mouvement réduit respecté.
 
 Source du fond : [Contours administratifs Etalab / IGN 2026](https://etalab-datasets.geo.data.gouv.fr/contours-administratifs/2026/geojson/departements-1000m.geojson), Licence Ouverte. Centres des communes : [API Découpage administratif](https://geo.api.gouv.fr/). Carte dérivée locale dans `site/assets/secteur-intervention.svg`, sans chargement de cartes ou de traceurs tiers.
+
+Pour la revue des formats, `apercu-responsive.html` affiche le site dans un cadre de 360, 390, 768 ou 1280 pixels. Cette page de contrôle est non indexable et absente de la navigation publique.
