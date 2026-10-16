@@ -7,6 +7,12 @@ toggle?.addEventListener('click', () => { const open = toggle.getAttribute('aria
 nav?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { toggle.setAttribute('aria-expanded','false'); nav.classList.remove('open'); }));
 document.addEventListener('keydown', e => { if(e.key==='Escape' && nav?.classList.contains('open')) { toggle.setAttribute('aria-expanded','false'); nav.classList.remove('open'); toggle.focus(); } });
 document.querySelectorAll('[data-email-link]').forEach(el => { el.href = 'mailto:' + cfg.contactEmail; el.textContent = cfg.contactEmail; });
+// Service pages link to ./?prestation=…#contact: preselect that service in the form.
+{
+  const wanted = new URLSearchParams(location.search).get('prestation');
+  const field = document.querySelector('#prestation');
+  if (wanted && field && [...field.options].some(o => o.value === wanted)) field.value = wanted;
+}
 document.querySelectorAll('[data-service]').forEach(el => el.addEventListener('click', () => { const field=document.querySelector('#prestation'); if(field) field.value=el.dataset.service; }));
 document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => {
   document.querySelectorAll('[data-filter]').forEach(b => { const active=b===button; b.classList.toggle('active',active); b.setAttribute('aria-pressed',String(active)); });
@@ -56,12 +62,22 @@ if(form){
     finally{submit.disabled=false;submit.innerHTML='Envoyer ma demande <span aria-hidden="true">↗</span>';}
   });
 }
-const review=document.querySelector('[data-review-button]');
-if(review && cfg.googleReviewUrl && /^https:\/\//.test(cfg.googleReviewUrl)){
-  review.href=cfg.googleReviewUrl;review.hidden=false;
+const reviewUrl = cfg.googleReviewUrl && /^https:\/\//.test(cfg.googleReviewUrl) ? cfg.googleReviewUrl : '';
+if(reviewUrl){
+  document.querySelectorAll('[data-review-button]').forEach(review=>{review.href=reviewUrl;review.hidden=false;});
   document.querySelectorAll('[data-review-pending]').forEach(el=>el.hidden=true);
   document.querySelectorAll('[data-review-qr]').forEach(qr=>{qr.alt='QR code pour partager votre avis sur Google';});
-
+  // qr.html: for a client who cannot scan, send the link (share sheet, else SMS).
+  document.querySelectorAll('[data-review-share]').forEach(button=>{
+    button.hidden=false;
+    button.addEventListener('click', async ()=>{
+      const status=document.querySelector('[data-qr-status]');
+      const text='Merci pour votre confiance ! Votre avis sur msplomberie : ';
+      if(navigator.share){ try{ await navigator.share({title:'Avis msplomberie', text, url:reviewUrl}); }catch{} return; }
+      location.href='sms:?&body='+encodeURIComponent(text+reviewUrl);
+      if(status) status.textContent='Si rien ne s’ouvre, copiez ce lien : '+reviewUrl;
+    });
+  });
 }
 document.querySelector('[data-print]')?.addEventListener('click',()=>window.print());
 

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Avis Google — msplomberie</title>
+  <meta name="robots" content="noindex, nofollow"><meta name="theme-color" content="#183453">
+  <link rel="manifest" href="qr.webmanifest">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Avis msplomberie"><meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script><script src="app.js" defer></script>
+</head>
+<body class="qr-app">
+  <main class="qr-screen">
+    <div class="brand qr-brand" aria-label="msplomberie"><span class="brand-mark" aria-hidden="true">m<span>s</span></span><span>msplomberie<small>CHAUFFAGE · SOLAIRE · SANITAIRE</small></span></div>
+    <h1>Scannez ce code<br><span>pour laisser votre avis.</span></h1>
+    <div class="qr-frame">
+      <img class="qr-big" src="assets/avis-google.svg" data-review-qr width="320" height="320" alt="QR code de démonstration vers la page explicative des avis msplomberie">
+      <span class="qr-demo-badge" data-review-pending>DÉMONSTRATION</span>
+    </div>
+    <p class="qr-hint">Ouvrez l’appareil photo de votre téléphone et visez le code.</p>
+    <p class="qr-thanks">Merci pour votre confiance — Sébastien Mauger</p>
+    <button type="button" class="btn qr-share" data-review-share hidden>Envoyer le lien au client <svg class="icon icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+    <p class="qr-status" data-qr-status role="status" aria-live="polite"></p>
+  </main>
+
+  <details class="qr-help">
+    <summary>Pour Sébastien : installer ce code sur l’écran d’accueil</summary>
+    <div>
+      <p class="qr-demo-note" data-review-pending><strong>Version de démonstration :</strong> ce code ouvre la page explicative. Dès que le lien d’avis de la fiche Google sera ajouté au site, ce même écran affichera le vrai code, sans rien réinstaller.</p>
+      <h2>iPhone</h2>
+      <ol><li>Ouvrez cette page dans <strong>Safari</strong>.</li><li>Touchez le bouton <strong>Partager</strong> (carré avec une flèche).</li><li>Choisissez <strong>Sur l’écran d’accueil</strong>, puis <strong>Ajouter</strong>.</li></ol>
+      <h2>Android</h2>
+      <ol><li>Ouvrez cette page dans <strong>Chrome</strong>.</li><li>Touchez le menu <strong>⋮</strong> en haut à droite.</li><li>Choisissez <strong>Ajouter à l’écran d’accueil</strong> ou <strong>Installer l’application</strong>.</li></ol>
+      <p>L’icône <strong>« Avis msplomberie »</strong> apparaît alors avec vos applications. Ouvrez-la une fois avec du réseau : ensuite, le code s’affiche même sans connexion chez le client.</p>
+      <p>Astuce : montez la luminosité de l’écran avant de présenter le code. L’écran reste allumé tant que la page est ouverte.</p>
+      <p>Rappel des règles Google : proposez le code à tous vos clients, sans rien offrir en échange d’un avis.</p>
+      <p><a href="avis.html">Ouvrir l’affiche à imprimer</a> · <a href="./">Retour au site</a></p>
+    </div>
+  </details>
+
+  <script>
+  // Keep the screen on while the code is shown (supported browsers only).
+  (() => {
+    let lock = null;
+    const keepAwake = async () => {
+      try { if ('wakeLock' in navigator && document.visibilityState === 'visible') lock = await navigator.wakeLock.request('screen'); } catch (e) { lock = null; }
+    };
+    keepAwake();
+    document.addEventListener('visibilitychange', keepAwake);
+    // Offline copy of this page only (the worker's scope is limited to qr.html).
+    if ('serviceWorker' in navigator && window.isSecureContext) {
+      navigator.serviceWorker.register('qr-sw.js', {scope: './qr.html'}).catch(() => {});
+    }
+  })();
+  </script>
+</body>
+</html>

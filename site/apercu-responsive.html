@@ -15,7 +15,7 @@
     <button data-width="768" aria-pressed="false">Tablette 768 px</button>
     <button data-width="1280" aria-pressed="false">PC 1280 px</button>
   </nav>
-  <label>Section <select id="section"><option value="">Accueil</option><option value="#savoir-faire">Savoir-faire</option><option value="#secteur">Zone d’intervention</option><option value="#contact">Contact</option><option value="#google">Google et QR code</option><option value="avis.html">Fiche QR code</option></select></label>
+  <label>Section <select id="section"><option value="">Accueil</option><option value="#savoir-faire">Savoir-faire</option><option value="#secteur">Zone d’intervention</option><option value="#contact">Contact</option><option value="pompe-a-chaleur.html">Page Pompe à chaleur</option><option value="panneaux-solaires.html">Page Panneaux solaires</option><option value="salle-de-bains.html">Page Salle de bains</option><option value="qr.html">QR code (téléphone)</option><option value="avis.html">Affiche QR code</option></select></label>
   <a href="./">Ouvrir le site</a>
 </header>
 <main><iframe src="./" title="Site msplomberie" id="site"></iframe></main>
@@ -28,7 +28,8 @@ document.querySelectorAll('[data-width]').forEach(button => button.addEventListe
   document.querySelectorAll('[data-width]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
 }));
 document.querySelector('#section').addEventListener('change', event => {
-  frame.src = event.target.value === 'avis.html' ? `avis.html?apercu=${previewVersion}` : `./?apercu=${previewVersion}${event.target.value}`;
+  const value = event.target.value;
+  frame.src = value.endsWith('.html') ? `${value}?apercu=${previewVersion}` : `./?apercu=${previewVersion}${value}`;
 });
 </script>
 </html>

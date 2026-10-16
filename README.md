@@ -25,10 +25,31 @@ Le mode par défaut reste `preview`, même pour un déploiement Netlify appelé 
 
 Compléter dans `site-config.json` les liens HTTPS :
 
-- `googleBusinessUrl` : future fiche Google ;
+- `googleBusinessUrl` : future fiche Google (le lien « Notre fiche Google » apparaît alors dans les coordonnées) ;
 - `googleReviewUrl` : lien officiel « Demander des avis » fourni par la fiche Google.
 
-Puis reconstruire. Le QR code SVG est généré localement vers ce lien exact et apparaît sur `avis.html`, avec téléchargement et impression. Tant que le lien Google est vide, un QR de démonstration mène à `demoReviewUrl`, la page explicative du site ; il porte la mention DÉMONSTRATION. Le QR de démonstration peut être téléchargé et imprimé. Aucun avis Google n’est simulé. L’invitation demande un avis sincère à tous les clients.
+Puis reconstruire. Le QR code SVG est généré localement vers ce lien exact. Tant que le lien Google est vide, un QR de démonstration mène à `demoReviewUrl` et porte la mention DÉMONSTRATION. Aucun avis Google n’est simulé. L’invitation demande un avis sincère à tous les clients.
+
+Le QR n’est plus affiché sur l’accueil : c’est un outil pour Sébastien, accessible par deux pages non indexées et absentes du menu.
+
+- **`qr.html` — écran de téléphone.** Le QR en plein écran, installable sur l’écran d’accueil (icône « Avis msplomberie », manifeste `qr.webmanifest`). Après une première ouverture avec du réseau, il s’affiche sans connexion grâce à `qr-sw.js` (portée limitée à `qr.html`, réseau d’abord puis copie locale). L’écran reste allumé tant que la page est ouverte. Quand `googleReviewUrl` est renseigné, un bouton « Envoyer le lien au client » ouvre le partage du téléphone (ou un SMS). Les consignes d’installation iPhone / Android sont sur la page elle-même.
+- **`avis.html` — affiche à imprimer**, avec téléchargement du QR.
+
+Le build remplit `qr-sw.js` avec la liste exacte des fichiers versionnés de `qr.html` : quand le lien Google change, le cache change aussi et le téléphone récupère le nouveau code à la prochaine ouverture avec du réseau.
+
+## Pages et référencement
+
+- Accueil : le H1 contient « Plombier-chauffagiste à Périers » (même rendu visuel qu’avant), données structurées `Plumber` / `HVACBusiness` et `FAQPage`.
+- Pages services : `pompe-a-chaleur.html`, `panneaux-solaires.html`, `salle-de-bains.html`. Même charte, contenus limités au brief validé, données structurées `Service`, `BreadcrumbList` et `FAQPage`. Leurs boutons ouvrent le formulaire de l’accueil avec la prestation déjà choisie (`./?prestation=…#contact`).
+- Dans le JSON-LD, une valeur `site:/chemin` devient une URL absolue quand `siteUrl` est renseigné ; sans `siteUrl`, elle est retirée.
+
+### Mise en ligne indexable
+
+1. Renseigner `siteUrl` (ex. `https://msplomberie.fr`, sans chemin) : le build ajoute les balises canonical et `og:url`, et complète le JSON-LD.
+2. Passer `indexable` à `true`. L’indexation n’est ouverte que sur Netlify avec `MSP_MODE=production` : `noindex` est retiré des pages publiques, `robots.txt` autorise l’exploration (sauf les outils) et `sitemap.xml` est généré. GitHub Pages reste toujours en `noindex`.
+3. Avant cela : mentions légales et confidentialité finalisées, car elles deviennent indexables.
+
+`scripts/check.py` vérifie aussi un H1 unique mentionnant Périers, le titre, la description, le JSON-LD, les liens vers les pages services, le manifeste et le cache hors ligne du QR. Il tourne dans le workflow GitHub Pages après le build.
 
 ## Brief validé
 
@@ -46,7 +67,7 @@ Puis reconstruire. Le QR code SVG est généré localement vers ce lien exact et
 
 Identité juridique, SIRET et mentions professionnelles ; justificatifs à jour RGE / QualiPV avec périmètres exacts ; conditions CEE / MaPrimeRénov’ et délégation de paiement ; droits de publication des photos ; conditions des devis ; liens sociaux ; description et communes des chantiers ; informations de traitement et conservation des données. Pas de promesse d’aides automatiques ni d’avis inventés.
 
-La maquette est en `noindex` et `robots.txt` interdit l’exploration. Au lancement validé, mettre à jour ces éléments, les mentions légales et la confidentialité, ajouter l’URL canonique et le sitemap.
+La maquette est en `noindex` et `robots.txt` interdit l’exploration. Au lancement validé, suivre « Mise en ligne indexable » ci-dessus.
 
 ## Sources des visuels
 
