@@ -1,5 +1,6 @@
 """Build static files for GitHub Pages and Netlify. Preview is fail-closed."""
 import json
+import hashlib
 import os
 from pathlib import Path
 import shutil
@@ -38,6 +39,15 @@ def build():
         html = html.replace('</form>', '<noscript><p class="noscript">Version de présentation : aucun envoi n’est possible.</p></noscript></form>')
         (OUT / 'index.html').write_text(html)
         (OUT / 'merci.html').write_text('<!doctype html><html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Maquette msplomberie</title><link rel="stylesheet" href="styles.css"><main class="wrap simple-content"><h1>Version de présentation</h1><p>Aucun message n’a été envoyé.</p><a class="btn" href="./#contact">Retour au formulaire</a></main></html>')
+    # A changed stylesheet/script/map must not reuse the previous cached asset.
+    assets = ('styles.css', 'app.js', 'config.js', 'assets/secteur-intervention.svg', 'assets/avis-google.svg')
+    for page in OUT.glob('*.html'):
+        html = page.read_text()
+        for asset in assets:
+            version = hashlib.sha256((OUT / asset).read_bytes()).hexdigest()[:12]
+            for attribute in ('src', 'href'):
+                html = html.replace(f'{attribute}="{asset}"', f'{attribute}="{asset}?v={version}"')
+        page.write_text(html)
     (OUT / '.nojekyll').touch()
     print(f'Build OK: {mode}; form enabled: {cfg["formEnabled"]}; {len(list(OUT.rglob("*")))} paths')
 
