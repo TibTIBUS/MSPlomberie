@@ -59,3 +59,9 @@ Le site ne prévoit plus de page Facebook. L’email public est toujours `msplom
 Source du fond : [Contours administratifs Etalab / IGN 2026](https://etalab-datasets.geo.data.gouv.fr/contours-administratifs/2026/geojson/departements-1000m.geojson), Licence Ouverte. Centres des communes : [API Découpage administratif](https://geo.api.gouv.fr/). Carte dérivée locale dans `site/assets/secteur-intervention.svg`, sans chargement de cartes ou de traceurs tiers.
 
 Pour la revue des formats, `apercu-responsive.html` affiche le site dans un cadre de 360, 390, 768 ou 1280 pixels. Cette page de contrôle est non indexable et absente de la navigation publique.
+
+## Lisibilité et carte — révision du 16 octobre
+
+Sur PC, les paragraphes passent à 18–20 px et les textes secondaires à 16–18 px avec `clamp()`. Les textes, la palette et la structure sont conservés. Icônes SVG au trait fin : flèche droite pour les liens internes, oblique pour les liens externes. Apparition unique des sections, zoom léger des photos et transitions des boutons ; les mouvements sont désactivés avec `prefers-reduced-motion`.
+
+La carte emploie désormais les contours Etalab / IGN 2026 à 100 m, afin de conserver la pointe de Granville. Le repère de Granville correspond au [centre-ville, cours Jonville, publié par la Ville](https://www.ville-granville.fr/locations/centre-ville/) : longitude −1.5965029, latitude 48.8379787. Le centre géographique de la commune, qui comprend Chausey, ne convient pas comme repère urbain. `python3 scripts/refresh-map.py` actualise le SVG depuis la source officielle ; `scripts/check.py` vérifie que les quatre repères sont sur la terre ferme.

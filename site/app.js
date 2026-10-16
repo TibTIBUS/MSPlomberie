@@ -64,3 +64,19 @@ if(review && cfg.googleReviewUrl && /^https:\/\//.test(cfg.googleReviewUrl)){
 
 }
 document.querySelector('[data-print]')?.addEventListener('click',()=>window.print());
+
+// One subtle entrance per section; keep everything visible without JS or motion.
+if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const entranceObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        entranceObserver.unobserve(entry.target);
+      }
+    });
+  }, {threshold: 0.04, rootMargin: '0px 0px -20px 0px'});
+  document.querySelectorAll('main > section:not(.hero), .expertise-strip').forEach(section => {
+    section.classList.add('motion-enter');
+    entranceObserver.observe(section);
+  });
+}

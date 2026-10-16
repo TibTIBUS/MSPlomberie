@@ -3,6 +3,8 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit
 import json
+import re
+import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / 'dist'
@@ -41,5 +43,23 @@ if cfg['mode']=='preview':
 assert 'Ramonage' not in (DIST/'index.html').read_text()
 assert 'Facebook' not in (DIST/'index.html').read_text()
 assert 'mailto:gestion.localia@gmail.com' not in (DIST/'index.html').read_text()
+# A coastal place must be pinned on the land silhouette, not the sea. This
+# catches Granville's offshore administrative centroid being used again.
+map_svg=ET.fromstring((DIST/'assets/secteur-intervention.svg').read_text())
+land_rings=[]
+for el in map_svg:
+    if el.get('class')=='land':
+        land_rings.append([(float(x),float(y)) for x,y in re.findall(r'[ML](-?[\d.]+) (-?[\d.]+)',el.get('d'))])
+def on_land(x,y,ring):
+    inside=False
+    for (a,b),(c,d) in zip(ring,ring[1:]+ring[:1]):
+        if (b>y)!=(d>y) and x<(c-a)*(y-b)/(d-b)+a: inside=not inside
+    return inside
+pins=[el for el in map_svg if el.get('data-city')]
+assert len(pins)==4
+for pin in pins:
+    assert any(on_land(float(pin.get('cx')),float(pin.get('cy')),ring) for ring in land_rings), f'{pin.get("data-city")}: map pin is offshore'
+granville=next(pin for pin in pins if pin.get('data-city')=='Granville')
+assert -1.61<float(granville.get('data-longitude'))<-1.56 and 48.83<float(granville.get('data-latitude'))<48.85
 assert not errors, '\n'.join(errors)
-print('OK — internal links, anchors, image alternatives, excluded services and preview transmission guard')
+print('OK — links, anchors, alternatives, preview transmission guard and four map pins on land')

@@ -161,3 +161,94 @@
   .google-review-card h3 { font-size: 23px; }
   .brand small { letter-spacing: 1px; }
 }
+
+/* Larger copy, consistent SVG icons and restrained motion; same layout/palette. */
+.icon { width: 24px; height: 24px; display: inline-block; flex-shrink: 0; vertical-align: middle; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.icon-arrow, .icon-external { width: 21px; height: 21px; transition: transform .25s ease; }
+.btn > span, .feature a > span { display: inline-flex; align-items: center; }
+.btn { transition: background .25s ease, transform .25s ease, box-shadow .25s ease; }
+.btn:hover { box-shadow: 0 7px 20px #18345314; }
+.btn:hover .icon-arrow, .text-link:hover .icon-arrow, .feature a:hover .icon-arrow, .area-contact:hover .icon-arrow, .aid-note > a:hover .icon-arrow { transform: translateX(4px); }
+.expertise-strip p { min-width: 0; }
+.expertise-icon { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; width: 28px; height: 32px; }
+.expertise-icon .icon { width: 27px; height: 27px; }
+.expertise-strip .expertise-label { font-size: inherit; font-weight: 500; color: inherit; }
+.hero-person .initials { width: 46px; height: 46px; flex-shrink: 0; font-size: 14px; }
+.hero-person p { font-size: clamp(16px,1.35vw,20px); line-height: 1.6; }
+.hero-person small { font-size: clamp(14px,1.15vw,17px); line-height: 1.65; }
+.aid-symbol .icon { width: 27px; height: 27px; }
+.area-contact { align-items: center; gap: 14px; }
+.card-preview > span, .cooperative a { align-items: center; }
+.card-preview .icon, .cooperative .icon, .footer-bottom .icon { width: 19px; height: 19px; }
+.zoom .icon { width: 20px; height: 20px; }
+.circle-arrow .icon { width: 20px; height: 20px; }
+.hero-image > img, .feature > img, .about-media > img { transition: transform .5s ease; }
+.motion-enter { opacity: 0; transform: translate3d(0,18px,0); transition: opacity .65s ease,transform .65s ease; }
+.motion-enter.is-visible { opacity: 1; transform: none; }
+.footer-bottom > div { flex-wrap: wrap; align-items: center; }
+.footer-bottom a { display: inline-flex; align-items: center; gap: 7px; }
+@media (hover:hover) and (pointer:fine) {
+  .hero-image:hover > img, .feature:hover > img, .about-media:hover > img { transform: scale(1.025); }
+  .service-list a:hover .icon-arrow { transform: translateX(3px); }
+}
+@media (min-width: 1001px) {
+  :root { --copy-size: clamp(18px,1.2vw,20px); --small-size: clamp(16px,1.05vw,18px); }
+  body { font-size: var(--copy-size); }
+  .topline, nav, .btn-small { font-size: var(--small-size); }
+  nav { gap: clamp(16px,1.7vw,25px); }
+  .eyebrow { font-size: var(--small-size); letter-spacing: 1.2px; }
+  .hero-intro, .hero-person p { font-size: var(--copy-size); }
+  .hero-person small, .hero-person .initials { font-size: var(--small-size); }
+  .hero-image figcaption, .image-label { font-size: var(--small-size); }
+  .expertise-strip p { font-size: var(--small-size); line-height: 1.65; }
+  .section-head > p, .section-lead { font-size: var(--copy-size); }
+  .pill { font-size: var(--small-size); }
+  .feature p { font-size: var(--copy-size); line-height: 1.8; }
+  .feature a, .text-link, .service-no { font-size: var(--small-size); }
+  .service-list h3 { font-size: clamp(21px,1.6vw,24px); }
+  .service-list p, .steps p { font-size: var(--copy-size); line-height: 1.8; }
+  .steps li > span { font-size: var(--small-size); }
+  .steps h3 { font-size: clamp(22px,1.7vw,25px); }
+  .aid-note { align-items: flex-start; }
+  .aid-symbol { width: 50px; height: 50px; }
+  .aid-note h3 { font-size: clamp(22px,1.8vw,26px); line-height: 1.35; }
+  .aid-note p { font-size: var(--copy-size); line-height: 1.85; max-width: 800px; margin-top: 12px; }
+  .aid-note > a { font-size: var(--small-size); flex: 0 0 180px; white-space: normal; line-height: 1.7; }
+  .filters button { font-size: var(--small-size); min-height: 44px; }
+  .project-type { font-size: var(--small-size); }
+  .project > strong { font-size: clamp(20px,1.55vw,23px); }
+  .experience p, .about-copy > p:not(.eyebrow) { font-size: var(--copy-size); }
+  .card-preview > span, .cooperative strong, .cooperative a { font-size: var(--small-size); }
+  .area-grid p:not(.eyebrow) { font-size: var(--copy-size); }
+  .towns span, .area-map figcaption, .area-map figcaption span, .area-contact { font-size: var(--small-size); }
+  .faq summary, .faq p { font-size: var(--copy-size); }
+  .contact-copy > p:not(.eyebrow), .contact-copy dd { font-size: var(--copy-size); }
+  .contact-copy dt, .contact-copy dd small { font-size: var(--small-size); }
+  .form-card > p, .form-row label, form > label { font-size: var(--small-size); }
+  input:not([type=checkbox]), select, textarea { font-size: var(--copy-size); min-height: 49px; }
+  .preview-note, .form-foot, label.consent, label small { font-size: var(--small-size); }
+  .upload-box label, .upload-box small, .upload-box input { font-size: var(--small-size); }
+  .upload-box input { min-height: 35px; }
+  .form-submit { font-size: var(--small-size); }
+  #form-status, .google-intro, .google-review-card p { font-size: var(--copy-size); }
+  .google-pending, .google-review-card .qr-demo-note, .google-review-card .text-link, .qr-demo-badge { font-size: var(--small-size); }
+  .footer-top > p, .footer-bottom { font-size: var(--small-size); }
+  .footer-bottom { flex-wrap: wrap; }
+  .simple-content p, .simple-content li, .review-sheet > p, .review-explanation ol, .review-explanation p { font-size: var(--copy-size); }
+  .review-tools, .review-tools button, .qr-placeholder p, dialog > p, .close-dialog { font-size: var(--small-size); }
+}
+@media (min-width: 1001px) and (max-width: 1150px) {
+  .expertise-strip { flex-wrap: wrap; }
+  .expertise-strip p { flex: 1 1 40%; }
+}
+@media (max-width: 760px) {
+  .expertise-strip p { font-size: clamp(13px,3.4vw,15px); line-height: 1.65; }
+  .expertise-icon { width: 26px; }
+  .expertise-icon .icon { width: 24px; height: 24px; }
+  .hero-person p { font-size: clamp(16px,4vw,18px); }
+  .hero-person small { font-size: clamp(14px,3.5vw,16px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .motion-enter { opacity: 1; transform: none; transition: none; }
+  .btn:hover, .btn:hover .icon-arrow, .text-link:hover .icon-arrow, .feature a:hover .icon-arrow, .area-contact:hover .icon-arrow, .aid-note > a:hover .icon-arrow, .service-list a:hover .icon-arrow, .project:hover img, .hero-image:hover > img, .feature:hover > img, .about-media:hover > img { transform: none; }
+}
