@@ -4,5 +4,7 @@
   "mode": "preview",
   "formEnabled": false,
   "contactEmail": "msplomberie50@hotmail.com",
-  "demoReviewUrl": "https://tibtibus.github.io/MSPlomberie/avis.html"
+  "demoReviewUrl": "https://tibtibus.github.io/MSPlomberie/avis.html",
+  "siteUrl": "",
+  "indexable": false
 }

@@ -1,0 +1,17 @@
+{
+  "name": "Avis msplomberie",
+  "short_name": "Avis msplomberie",
+  "description": "QR code à présenter aux clients pour laisser un avis Google sur msplomberie.",
+  "lang": "fr",
+  "id": "qr.html",
+  "start_url": "qr.html",
+  "scope": "qr.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#183453",
+  "icons": [
+    {"src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"},
+    {"src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ]
+}
