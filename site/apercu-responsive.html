@@ -21,12 +21,14 @@
 <main><iframe src="./" title="Site msplomberie" id="site"></iframe></main>
 <script>
 const frame = document.querySelector('#site');
+const previewVersion = '__MSP_PREVIEW_VERSION__';
+frame.src = `./?apercu=${previewVersion}`;
 document.querySelectorAll('[data-width]').forEach(button => button.addEventListener('click', () => {
   frame.style.width = `${button.dataset.width}px`;
   document.querySelectorAll('[data-width]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
 }));
 document.querySelector('#section').addEventListener('change', event => {
-  frame.src = event.target.value === 'avis.html' ? 'avis.html' : `./${event.target.value}`;
+  frame.src = event.target.value === 'avis.html' ? `avis.html?apercu=${previewVersion}` : `./?apercu=${previewVersion}${event.target.value}`;
 });
 </script>
 </html>

@@ -48,6 +48,10 @@ def build():
             for attribute in ('src', 'href'):
                 html = html.replace(f'{attribute}="{asset}"', f'{attribute}="{asset}?v={version}"')
         page.write_text(html)
+    preview_page = OUT / 'apercu-responsive.html'
+    if preview_page.exists():
+        preview_version = hashlib.sha256((OUT / 'index.html').read_bytes()).hexdigest()[:12]
+        preview_page.write_text(preview_page.read_text().replace('__MSP_PREVIEW_VERSION__', preview_version))
     (OUT / '.nojekyll').touch()
     print(f'Build OK: {mode}; form enabled: {cfg["formEnabled"]}; {len(list(OUT.rglob("*")))} paths')
 
