@@ -1,0 +1,20 @@
+[build]
+  command = "python3 scripts/build.py"
+  publish = "dist"
+
+# The default is preview (no submission). Set MSP_MODE=test in Netlify only
+# after notification routing exclusively to Localia has been configured.
+# Never infer production from Netlify's deploy context.
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "DENY"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
