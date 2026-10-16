@@ -5,3 +5,154 @@
 @media(max-width:380px){.hero h1{font-size:50px}.wrap{width:calc(100% - 32px)}.project-img{height:180px}.form-row{grid-template-columns:1fr}.topline{font-size:8px}.contact-copy dl{grid-template-columns:1fr}.contact-copy dl>div:last-child{grid-column:auto}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 @media print{.simple-header,.review-tools,.mobile-contact,footer{display:none!important}.review-page{background:white}.review-sheet{border:0;margin:30px auto;box-shadow:none;break-inside:avoid}.review-sheet .brand{margin-bottom:45px}.qr-code{width:300px;height:300px}}
+
+/* Second presentation: solar layout, geographic coverage and mobile reading. */
+.wrap > *, .feature-grid > *, .contact-grid > *, .form-row > * { min-width: 0; }
+.heating { display: flex; }
+.heating .feature-content { flex: 1; }
+.solar-art { position: relative; height: 225px; }
+.solar .feature-content { min-height: 0; padding-top: 0; }
+.solar .pill { margin: 0 0 20px; }
+.solar .art-caption { top: auto; bottom: 5px; left: 30px; font-size: 8px; }
+.solar .panels { top: 34px; }
+.solar .feature-content h3 { margin-top: 0; }
+
+.area-section { padding-block: 65px; }
+.area-grid { grid-template-columns: .9fr 1.15fr; gap: 18px 7%; }
+.area-grid > div:first-child { grid-column: 1; }
+.area-grid > div:nth-child(2) { grid-column: 1; align-self: start; }
+.area-grid > div:nth-child(2) > p { max-width: 400px; }
+.area-map { grid-column: 2; grid-row: 1 / 3; padding: 0; min-width: 0; }
+.area-map img { width: 100%; border: 1px solid #63829b50; border-radius: 15px; }
+.area-map figcaption { color: #c9d8e3; font-size: 11px; margin-top: 10px; line-height: 1.8; }
+.area-map figcaption span { font-size: 9px; color: #95aec1; }
+.area-contact { display: inline-flex; padding-block: 14px; font-size: 12px; color: #d8ef9d; border-bottom: 1px solid #d8ef9d70; margin-top: 12px; }
+
+.social-section { grid-template-columns: .65fr 1.35fr; gap: 8%; align-items: center; }
+.google-intro { margin-top: 20px; font-size: 14px; line-height: 1.9; }
+.google-pending { font-size: 12px; color: #526b40; margin-top: 15px; }
+.google-review-card { display: grid; grid-template-columns: 175px 1fr; align-items: center; gap: 25px; padding: 28px; border: 1px solid #e0e6d9; background: #f6f8f1; border-radius: 8px; }
+.qr-preview-link { display: block; background: #fff; padding: 9px; border-radius: 6px; text-align: center; }
+.qr-preview-link img { width: 100%; height: auto; }
+.qr-demo-badge { display: block; text-align: center; font-size: 9px; font-weight: 700; letter-spacing: 1px; color: #607841; padding: 9px 5px 3px; }
+.google-review-card h3 { font-size: 22px; line-height: 1.3; letter-spacing: -.5px; }
+.google-review-card p { font-size: 12px; line-height: 1.9; margin-top: 14px; }
+.google-review-card .qr-demo-note { color: #5b7146; font-size: 11px; }
+.google-review-card .text-link { font-size: 12px; margin-top: 16px; gap: 20px; }
+.review-qr-wrap { background: #fff; margin-block: 25px; }
+.review-qr-wrap .qr-code { margin-block: 0; }
+.review-explanation { text-align: left; background: #f4f7ed; padding: 22px; border-radius: 5px; }
+.review-explanation h2 { font-size: 19px; margin: 0 0 16px; letter-spacing: -.4px; }
+.review-explanation ol { font-size: 13px; color: #445b40; line-height: 1.9; padding-left: 20px; margin: 0; }
+.review-explanation li + li { margin-top: 9px; }
+.review-explanation p { font-size: 12px; line-height: 1.9; margin-bottom: 0; }
+
+@media (min-width: 761px) and (max-width: 1000px) {
+  .nav { height: 80px; }
+  .menu-toggle { display: flex; align-items: center; gap: 10px; padding: 10px 15px; background: white; color: #183453; border: 1px solid #dce3db; border-radius: 3px; }
+  nav { display: none; position: absolute; top: 80px; inset-inline: 0; padding: 20px 32px; background: #fff; box-shadow: 0 10px 20px #18345315; }
+  nav.open { display: flex; flex-direction: column; align-items: stretch; gap: 5px; }
+  nav > a:not(.btn) { padding: 10px; font-size: 15px; }
+  .hero h1 { font-size: clamp(48px, 6.2vw, 62px); letter-spacing: -2.5px; }
+  .hero-image { min-height: 525px; }
+  .area-grid { gap: 20px 5%; grid-template-columns: 1fr 1fr; }
+  .area-grid h2 { font-size: 30px; }
+  .google-review-card { padding: 20px; grid-template-columns: 130px 1fr; gap: 18px; }
+  .social-section { grid-template-columns: .6fr 1.4fr; gap: 5%; }
+  .social-section h2 { font-size: 29px; }
+  .google-review-card h3 { font-size: 20px; }
+  .contact-grid { grid-template-columns: .75fr 1.25fr; gap: 5%; }
+  .contact-copy h2 { font-size: 34px; }
+  .form-row { grid-template-columns: 1fr; gap: 16px; }
+}
+@media (max-width: 760px) {
+  html { scroll-padding-top: 94px; scroll-padding-bottom: 100px; }
+  body { padding-bottom: env(safe-area-inset-bottom); }
+  h2, .section-head h2 { font-size: clamp(29px, 7.5vw, 36px); }
+  .hero h1 { font-size: clamp(45px, 11.5vw, 61px); }
+  .hero .eyebrow { font-size: 9px; letter-spacing: 1px; flex-wrap: wrap; }
+  .hero-intro, .section-lead, .about-copy > p:not(.eyebrow), .section-head > p, .contact-copy > p:not(.eyebrow), .faq p { font-size: 15px; line-height: 1.85; }
+  .hero-person small { font-size: 11px; }
+  .hero .btn { width: 100%; }
+  .hero-image { min-height: 330px; }
+  .hero-image figcaption { font-size: 11px; }
+  .image-label { font-size: 10px; }
+  .expertise-strip p { font-size: 11px; line-height: 1.6; }
+  .eyebrow { font-size: 10px; }
+  .feature-content { min-height: 420px; }
+  .feature p { font-size: 15px; line-height: 1.8; }
+  .feature a { min-height: 50px; font-size: 14px; }
+  .solar-art { height: 225px; }
+  .solar .feature-content { padding-top: 15px; min-height: 0; }
+  .solar .pill { margin-bottom: 20px; }
+  .service-list h3 { font-size: 19px; }
+  .service-list p { font-size: 13px; line-height: 1.7; }
+  .steps p, .aid-note p { font-size: 14px; }
+  .steps h3 { font-size: 21px; }
+  .aid-note > a { font-size: 13px; min-height: 44px; display: flex; align-items: center; }
+  .filters button { font-size: 12px; min-height: 44px; padding-inline: 13px; }
+  .faq summary { font-size: 15px; padding-block: 22px; }
+  .cooperative img { width: 120px; }
+  .cooperative strong { font-size: 12px; }
+  .cooperative a { font-size: 12px; min-height: 40px; align-items: center; }
+  .area-grid { grid-template-columns: 1fr; gap: 24px; }
+  .area-grid > div:first-child, .area-grid > div:nth-child(2), .area-map { grid-column: 1; grid-row: auto; }
+  .area-grid p:not(.eyebrow) { font-size: 15px; }
+  .towns span { font-size: 12px; }
+  .area-map figcaption { font-size: 12px; }
+  .area-map figcaption span { font-size: 10px; }
+  .area-contact { font-size: 14px; }
+  .contact-copy dd { font-size: 15px; }
+  .contact-copy dt { font-size: 10px; }
+  .contact-copy dd small { font-size: 13px; }
+  .contact-copy a { display: inline-flex; align-items: center; min-height: 38px; }
+  .form-card { padding: 25px 22px; }
+  .form-card > p { font-size: 14px; }
+  .form-row { grid-template-columns: 1fr; gap: 19px; margin-bottom: 19px; }
+  .form-row label, form > label { font-size: 14px; }
+  label small { font-size: 12px; }
+  input:not([type=checkbox]), select, textarea { font-size: 16px; min-height: 49px; padding: 12px; }
+  textarea { min-height: 145px; }
+  .preview-note { font-size: 12px; }
+  .upload-box { padding: 14px 12px; }
+  .upload-box > div { min-width: 0; }
+  .upload-box label { font-size: 14px; }
+  .upload-box small { font-size: 11px; }
+  .upload-box input { font-size: 12px; min-height: 38px; }
+  label.consent { font-size: 13px; gap: 12px; padding-block: 10px; }
+  input[type=checkbox] { width: 21px; height: 21px; }
+  .form-submit { font-size: 15px; min-height: 54px; }
+  .form-foot { font-size: 11px; }
+  #form-status { font-size: 14px; }
+  .social-section { grid-template-columns: 1fr; gap: 28px; }
+  .google-review-card { padding: 23px; }
+  .google-review-card p { font-size: 14px; }
+  .google-review-card .qr-demo-note { font-size: 12px; }
+  .google-review-card .text-link { min-height: 44px; font-size: 13px; }
+  .google-intro { font-size: 15px; }
+  .google-pending { font-size: 13px; }
+  .qr-demo-badge { font-size: 10px; }
+  .mobile-contact { bottom: calc(12px + env(safe-area-inset-bottom)); min-height: 53px; }
+  .footer-bottom { padding-bottom: calc(100px + env(safe-area-inset-bottom)); font-size: 11px; }
+  .footer-bottom > div { gap: 10px 18px; }
+  .footer-bottom a { display: inline-flex; min-height: 36px; align-items: center; }
+  .review-sheet { margin-inline: auto; width: min(570px, calc(100% - 32px)); padding: 30px 22px; }
+  .review-sheet .brand { font-size: 22px; gap: 9px; }
+  .review-sheet .brand small { font-size: 6px; }
+  .review-sheet > p { font-size: 15px; }
+  .review-explanation { padding: 20px; }
+  .review-explanation ol { font-size: 14px; }
+  .review-explanation p { font-size: 13px; }
+  .review-tools { gap: 15px; }
+  .review-tools a, .review-tools button { min-height: 44px; display: inline-flex; align-items: center; font-size: 13px; }
+}
+@media (max-width: 600px) {
+  .gallery { grid-template-columns: 1fr; gap: 29px; }
+  .project-img { height: auto; aspect-ratio: 4 / 3; }
+  .project > strong { font-size: 18px; }
+  .project-type { font-size: 11px; }
+  .google-review-card { grid-template-columns: 1fr; gap: 25px; }
+  .qr-preview-link { width: 200px; justify-self: center; }
+  .google-review-card h3 { font-size: 23px; }
+  .brand small { letter-spacing: 1px; }
+}

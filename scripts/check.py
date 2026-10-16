@@ -36,8 +36,10 @@ for f in DIST.glob('*.html'):
 cfg=json.loads((DIST/'config.js').read_text().split(' = ',1)[1].rstrip(';\n'))
 if cfg['mode']=='preview':
     assert cfg['formEnabled'] is False
-    assert cfg['contactEmail']=='gestion.localia@gmail.com'
+    assert cfg['contactEmail']=='msplomberie50@hotmail.com'
     assert 'onsubmit="return false"' in (DIST/'index.html').read_text()
 assert 'Ramonage' not in (DIST/'index.html').read_text()
+assert 'Facebook' not in (DIST/'index.html').read_text()
+assert 'mailto:gestion.localia@gmail.com' not in (DIST/'index.html').read_text()
 assert not errors, '\n'.join(errors)
 print('OK — internal links, anchors, image alternatives, excluded services and preview transmission guard')

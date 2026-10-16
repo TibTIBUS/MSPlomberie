@@ -15,21 +15,20 @@ Netlify : importer ce dépôt ; le fichier `netlify.toml` définit la commande e
 
 ## Contact : trois étapes distinctes
 
-- **Maquette / GitHub Pages** : `preview`, aucun envoi et aucune collecte. Le bouton vérifie le formulaire sans transmettre. Les emails cliquables utilisent Localia.
+- **Maquette / GitHub Pages** : `preview`, aucun envoi et aucune collecte. Le bouton vérifie le formulaire sans transmettre. L’adresse publique affichée reste celle de Sébastien, indépendamment du mode de test.
 - **Essais Netlify** : activer Forms, configurer les notifications **uniquement vers `gestion.localia@gmail.com`**, puis définir `MSP_MODE=test` et redéployer. Vérifier la réception d’un vrai test et le Reply-To.
 - **Production** : après validation, routage **To: `msplomberie50@hotmail.com`**, **Cc: `gestion.localia@gmail.com`**, et `Reply-To` vers le visiteur. Les notifications natives Netlify peuvent avertir plusieurs destinataires ; une véritable en-tête Cc devra être configurée via le mécanisme d’envoi choisi, puis testée avant activation. Ne pas considérer que `MSP_MODE` configure les notifications : il ne le fait pas.
 
 Le mode par défaut reste `preview`, même pour un déploiement Netlify appelé « production ». Ne définir `MSP_MODE=production` qu’après avoir finalisé le routage des emails et les pages légales/confidentialité. Aucune adresse destinataire n’est acceptée depuis les champs du formulaire. Photo facultative : un fichier JPG/PNG/WebP de 5 Mo maximum. Contrôle de format et de taille côté navigateur, honeypot et filtrage Netlify ; valider les exigences côté serveur avant le lancement.
 
-## Facebook, Google Business et QR code
+## Google Business et QR code
 
 Compléter dans `site-config.json` les liens HTTPS :
 
-- `facebookUrl` : future page Facebook ;
 - `googleBusinessUrl` : future fiche Google ;
 - `googleReviewUrl` : lien officiel « Demander des avis » fourni par la fiche Google.
 
-Puis reconstruire. Le QR code SVG est généré localement vers ce lien exact et apparaît sur `avis.html`, avec téléchargement et impression. Tant que le lien est vide, un emplacement explicite est affiché : aucun faux QR code ni faux avis. L’invitation demande un avis sincère à tous les clients.
+Puis reconstruire. Le QR code SVG est généré localement vers ce lien exact et apparaît sur `avis.html`, avec téléchargement et impression. Tant que le lien Google est vide, un QR de démonstration mène à `demoReviewUrl`, la page explicative du site ; il porte la mention DÉMONSTRATION. Le QR de démonstration peut être téléchargé et imprimé. Aucun avis Google n’est simulé. L’invitation demande un avis sincère à tous les clients.
 
 ## Brief validé
 
@@ -52,3 +51,9 @@ La maquette est en `noindex` et `robots.txt` interdit l’exploration. Au lancem
 ## Sources des visuels
 
 Photos de chantiers et supports transmis par Thibaut pour ce projet. Versions originales conservées hors du dépôt ; versions WebP optimisées dans `site/assets/`. Logo de la coopérative fourni. Le dessin solaire est une illustration CSS explicitement identifiée et ne représente pas un chantier.
+
+## Seconde maquette — ajustements
+
+Le site ne prévoit plus de page Facebook. L’email public est toujours `msplomberie50@hotmail.com` ; les futurs envois de test restent destinés exclusivement à Localia. Illustration solaire et libellé séparés. Carte vectorielle animée Manche / Calvados avec départ à Périers et villes citées ; il ne s’agit ni d’une limite contractuelle de desserte ni d’un itinéraire routier. Mouvement réduit respecté.
+
+Source du fond : [Contours administratifs Etalab / IGN 2026](https://etalab-datasets.geo.data.gouv.fr/contours-administratifs/2026/geojson/departements-1000m.geojson), Licence Ouverte. Centres des communes : [API Découpage administratif](https://geo.api.gouv.fr/). Carte dérivée locale dans `site/assets/secteur-intervention.svg`, sans chargement de cartes ou de traceurs tiers.

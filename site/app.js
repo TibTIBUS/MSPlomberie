@@ -1,5 +1,5 @@
 'use strict';
-const cfg = window.MSP_CONFIG || {formEnabled:false,contactEmail:'gestion.localia@gmail.com'};
+const cfg = window.MSP_CONFIG || {formEnabled:false,contactEmail:'msplomberie50@hotmail.com'};
 document.querySelectorAll('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });
 const nav = document.querySelector('#navigation');
 const toggle = document.querySelector('.menu-toggle');
@@ -21,7 +21,7 @@ document.querySelectorAll('[data-image]').forEach(button => button.addEventListe
 lightbox?.querySelector('.close-dialog').addEventListener('click',()=>lightbox.close());
 lightbox?.addEventListener('click',e=>{if(e.target===lightbox)lightbox.close();});
 lightbox?.addEventListener('close',()=>lastPhotoButton?.focus());
-for (const [name,url] of [['facebook',cfg.facebookUrl],['google',cfg.googleBusinessUrl]]) {
+for (const [name,url] of [['google',cfg.googleBusinessUrl]]) {
   if (url && /^https:\/\//.test(url)) {
     document.querySelectorAll('[data-social="'+name+'"]').forEach(el=>{el.href=url;el.hidden=false;});
     document.querySelectorAll('[data-'+name+'-pending]').forEach(el=>el.hidden=true);
@@ -60,8 +60,7 @@ const review=document.querySelector('[data-review-button]');
 if(review && cfg.googleReviewUrl && /^https:\/\//.test(cfg.googleReviewUrl)){
   review.href=cfg.googleReviewUrl;review.hidden=false;
   document.querySelectorAll('[data-review-pending]').forEach(el=>el.hidden=true);
-  const qr=document.querySelector('[data-qr]');qr.src='assets/avis-google.svg';qr.hidden=false;
-  const download=document.querySelector('[data-qr-download]');download.hidden=false;
-  document.querySelector('[data-print]').hidden=false;
+  document.querySelectorAll('[data-review-qr]').forEach(qr=>{qr.alt='QR code pour partager votre avis sur Google';});
+
 }
 document.querySelector('[data-print]')?.addEventListener('click',()=>window.print());

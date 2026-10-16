@@ -20,16 +20,17 @@ def build():
         raise ValueError('MSP_MODE must be preview, test or production')
     cfg['mode'] = mode
     cfg['formEnabled'] = is_netlify and mode in ('test', 'production')
-    cfg['contactEmail'] = 'msplomberie50@hotmail.com' if mode == 'production' else 'gestion.localia@gmail.com'
-    for key in ('facebookUrl', 'googleBusinessUrl', 'googleReviewUrl'):
+    # Public contact is independent from notification recipients.
+    cfg['contactEmail'] = 'msplomberie50@hotmail.com'
+    for key in ('googleBusinessUrl', 'googleReviewUrl', 'demoReviewUrl'):
         if cfg[key] and (urlparse(cfg[key]).scheme != 'https' or not urlparse(cfg[key]).netloc):
             raise ValueError(f'{key}: expected a complete HTTPS URL')
     (OUT / 'config.js').write_text('window.MSP_CONFIG = ' + json.dumps(cfg, ensure_ascii=False) + ';\n')
-    if cfg['googleReviewUrl']:
+    if cfg['googleReviewUrl'] or cfg['demoReviewUrl']:
         import qrcode
         from qrcode.image.svg import SvgPathImage
         qr = qrcode.QRCode(error_correction=qrcode.constants.ERROR_CORRECT_M, box_size=10, border=4)
-        qr.add_data(cfg['googleReviewUrl']); qr.make(fit=True)
+        qr.add_data(cfg['googleReviewUrl'] or cfg['demoReviewUrl']); qr.make(fit=True)
         qr.make_image(image_factory=SvgPathImage).save(OUT / 'assets' / 'avis-google.svg')
     if not cfg['formEnabled']:
         html = (OUT / 'index.html').read_text()
