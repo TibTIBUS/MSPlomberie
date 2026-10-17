@@ -1,0 +1,330 @@
+{
+  "received": "2026-10-17",
+  "source": "Photos de chantiers transmises par Thibaut pour msplomberie",
+  "processing": "Orientation EXIF appliquée, conversion WebP sans métadonnées, aperçu 900 px / agrandissement 1600 px maximum ; aucun changement du contenu photographié.",
+  "photos": [
+    {
+      "source": "20231030_160922.jpg",
+      "category": "chauffage",
+      "type": "ÉTAT EXISTANT",
+      "title": "Équipement de chauffage existant",
+      "alt": "Équipement de chauffage rouge avec conduit de fumée dans une chaufferie",
+      "full": {
+        "path": "assets/chantiers/chauffage-existant-20231030.webp",
+        "width": 720,
+        "height": 1600,
+        "bytes": 78628
+      },
+      "thumbnail": {
+        "path": "assets/chantiers/chauffage-existant-20231030-apercu.webp",
+        "width": 405,
+        "height": 900,
+        "bytes": 29454
+      }
+    },
+    {
+      "source": "20241024_162613.jpg",
+      "category": "chauffage",
+      "type": "CHAUFFAGE",
+      "title": "Module intérieur en local technique",
+      "alt": "Module intérieur de chauffage blanc dans un local aux murs en parpaings",
+      "full": {
+        "path": "assets/chantiers/module-chauffage-20241024.webp",
+        "width": 901,
+        "height": 1600,
+        "bytes": 109352
+      },
+      "thumbnail": {
+        "path": "assets/chantiers/module-chauffage-20241024-apercu.webp",
+        "width": 507,
+        "height": 900,
+        "bytes": 41488
+      }
+    },
+    {
+      "source": "20241024_162630.jpg",
+      "category": "chauffage",
+      "type": "RACCORDEMENTS",
+      "title": "Détail des raccordements hydrauliques",
+      "alt": "Raccordements hydrauliques avec vannes et tuyauteries isolées",
+      "full": {
+        "path": "assets/chantiers/raccordements-chauffage-20241024.webp",
+        "width": 901,
+        "height": 1600,
+        "bytes": 118826
+      },
+      "thumbnail": {
+        "path": "assets/chantiers/raccordements-chauffage-20241024-apercu.webp",
+        "width": 507,
+        "height": 900,
+        "bytes": 48438
+      }
+    },
+    {
+      "source": "20241216_081907.jpg",
+      "category": "chauffage",
+      "type": "ÉTAT EXISTANT",
+      "title": "Chaudière existante dans la chaufferie",
+      "alt": "Chaudière bleue et conduit de fumée dans une chaufferie",
+      "full": {
+        "path": "assets/chantiers/chaudiere-existante-20241216.webp",
+        "width": 1200,
+        "height": 1600,
+        "bytes": 89136
+      },
+      "thumbnail": {
+        "path": "assets/chantiers/chaudiere-existante-20241216-apercu.webp",
+        "width": 675,
+        "height": 900,
+        "bytes": 35400
+      }
+    },
+    {
+      "source": "20241217_154203.jpg",
+      "category": "chauffage",
+      "type": "CHAUFFAGE",
+      "title": "Installation et circuits de chauffage",
+      "alt": "Équipement intérieur de chauffage blanc, ballon et circuits hydrauliques",
+      "full": {
+        "path": "assets/chantiers/installation-chauffage-20241217.webp",
+        "width": 1200,
+        "height": 1600,
+        "bytes": 168100
+      },
+      "thumbnail": {
+        "path": "assets/chantiers/installation-chauffage-20241217-apercu.webp",
+        "width": 675,
+        "height": 900,
+        "bytes": 56196
+      }
+    },
+    {
+      "source": "20241218_121030.jpg",
+      "category": "chauffage",
+      "type": "PRÉPARATION DU CHANTIER",
+      "title": "Support extérieur en préparation",
+      "alt": "Coffrage et armature d’un support extérieur au pied d’une façade",
+      "full": {
+        "path": "assets/chantiers/support-exterieur-20241218.webp",
+        "width": 1072,
+        "height": 1429,
+        "bytes": 504958
+      },
+      "thumbnail": {
+        "path": "assets/chantiers/support-exterieur-20241218-apercu.webp",
+        "width": 675,
+        "height": 900,
+        "bytes": 174848
+      }
+    },
+    {
+      "source": "20241224_122532.jpg",
+      "category": "chauffage",
+      "type": "POMPE À CHALEUR",
+      "title": "Unité extérieure installée sur son support",
+      "alt": "Unité extérieure de pompe à chaleur sur un support au pied d’une maison",
+      "full": {
+        "path": "assets/chantiers/pac-exterieure-20241224.webp",
+        "width": 1047,
+        "height": 1396,
+        "bytes": 390494
+      },
+      "thumbnail": {
+        "path": "assets/chantiers/pac-exterieure-20241224-apercu.webp",
+        "width": 675,
+        "height": 900,
+        "bytes": 117542
+      }
+    },
+    {
+      "source": "20240506_065609.jpg",
+      "category": "bains",
+      "type": "ÉTAT EXISTANT",
+      "title": "Pièce sanitaire avec baignoire",
+      "alt": "Pièce sanitaire carrelée avec baignoire et fenêtre en fond de pièce",
+      "full": {
+        "path": "assets/chantiers/piece-sanitaire-20240506.webp",
+        "width": 901,
+        "height": 1600,
+        "bytes": 81466
+      },
+      "thumbnail": {
+        "path": "assets/chantiers/piece-sanitaire-20240506-apercu.webp",
+        "width": 507,
+        "height": 900,
+        "bytes": 26978
+      }
+    },
+    {
+      "source": "20240510_113620.jpg",
+      "category": "bains",
+      "type": "SALLE DE BAINS · CHANTIER",
+      "title": "Préparation des parois et de la plomberie",
+      "alt": "Salle de bains en chantier avec parois préparées et attentes de plomberie",
+      "full": {
+        "path": "assets/chantiers/salle-bains-chantier-20240510.webp",
+        "width": 901,
+        "height": 1600,
+        "bytes": 77122
+      },
+      "thumbnail": {
+        "path": "assets/chantiers/salle-bains-chantier-20240510-apercu.webp",
+        "width": 507,
+        "height": 900,
+        "bytes": 22652
+      }
+    },
+    {
+      "source": "20240617_084839.jpg",
+      "category": "chauffage",
+      "type": "PRÉPARATION DU CHANTIER",
+      "title": "Préparation d’un local technique",
+      "alt": "Local technique en préparation avec murs en pierre et réseaux apparents",
+      "full": {
+        "path": "assets/chantiers/local-technique-20240617.webp",
+        "width": 901,
+        "height": 1600,
+        "bytes": 250746
+      },
+      "thumbnail": {
+        "path": "assets/chantiers/local-technique-20240617-apercu.webp",
+        "width": 507,
+        "height": 900,
+        "bytes": 82398
+      }
+    },
+    {
+      "source": "20240618_095316.jpg",
+      "category": "chauffage",
+      "type": "SUR LE CHANTIER",
+      "title": "Intervention dans une maison en pierre",
+      "alt": "Intervention de chantier au pied d’une maison en pierre",
+      "full": {
+        "path": "assets/chantiers/chantier-chauffage-20240618.webp",
+        "width": 901,
+        "height": 1600,
+        "bytes": 449800
+      },
+      "thumbnail": {
+        "path": "assets/chantiers/chantier-chauffage-20240618-apercu.webp",
+        "width": 507,
+        "height": 900,
+        "bytes": 131420
+      }
+    },
+    {
+      "source": "20240618_105538.jpg",
+      "category": "chauffage",
+      "type": "INSTALLATION INTÉRIEURE",
+      "title": "Équipement Atlantic en local technique",
+      "alt": "Équipement intérieur Atlantic avec ses raccordements dans un local en pierre",
+      "full": {
+        "path": "assets/chantiers/equipement-atlantic-20240618.webp",
+        "width": 901,
+        "height": 1600,
+        "bytes": 137242
+      },
+      "thumbnail": {
+        "path": "assets/chantiers/equipement-atlantic-20240618-apercu.webp",
+        "width": 507,
+        "height": 900,
+        "bytes": 55964
+      }
+    },
+    {
+      "source": "20240618_105541.jpg",
+      "category": "chauffage",
+      "type": "RACCORDEMENTS",
+      "title": "Réseaux et raccordements du local technique",
+      "alt": "Réseaux et tuyauteries apparents dans un local technique en pierre",
+      "full": {
+        "path": "assets/chantiers/reseaux-techniques-20240618.webp",
+        "width": 901,
+        "height": 1600,
+        "bytes": 102628
+      },
+      "thumbnail": {
+        "path": "assets/chantiers/reseaux-techniques-20240618-apercu.webp",
+        "width": 507,
+        "height": 900,
+        "bytes": 41258
+      }
+    },
+    {
+      "source": "20240618_114639.jpg",
+      "category": "chauffage",
+      "type": "POMPE À CHALEUR",
+      "title": "Unité extérieure devant une façade en pierre",
+      "alt": "Pompe à chaleur extérieure installée au pied d’une façade en pierre",
+      "full": {
+        "path": "assets/chantiers/pac-maison-pierre-20240618.webp",
+        "width": 1600,
+        "height": 901,
+        "bytes": 471468
+      },
+      "thumbnail": {
+        "path": "assets/chantiers/pac-maison-pierre-20240618-apercu.webp",
+        "width": 900,
+        "height": 507,
+        "bytes": 136170
+      }
+    },
+    {
+      "source": "20240624_093340.jpg",
+      "category": "bains",
+      "type": "SALLE DE BAINS",
+      "title": "Vue d’ensemble de la pièce aménagée",
+      "alt": "Salle de bains aménagée avec sol sombre, parois claires et fenêtre",
+      "full": {
+        "path": "assets/chantiers/salle-bains-vue-ensemble-20240624.webp",
+        "width": 901,
+        "height": 1600,
+        "bytes": 85502
+      },
+      "thumbnail": {
+        "path": "assets/chantiers/salle-bains-vue-ensemble-20240624-apercu.webp",
+        "width": 507,
+        "height": 900,
+        "bytes": 24856
+      }
+    },
+    {
+      "source": "20240624_093357.jpg",
+      "category": "bains",
+      "type": "SALLE DE BAINS",
+      "title": "Vasque, meuble et miroir rond",
+      "alt": "Vasque à poser, meuble suspendu, robinetterie et miroir rond éclairé",
+      "full": {
+        "path": "assets/chantiers/salle-bains-vasque-20240624.webp",
+        "width": 901,
+        "height": 1600,
+        "bytes": 108650
+      },
+      "thumbnail": {
+        "path": "assets/chantiers/salle-bains-vasque-20240624-apercu.webp",
+        "width": 507,
+        "height": 900,
+        "bytes": 30296
+      }
+    },
+    {
+      "source": "20240624_093506.jpg",
+      "category": "bains",
+      "type": "SALLE DE BAINS",
+      "title": "Espace douche et paroi vitrée noire",
+      "alt": "Salle de bains avec espace douche et paroi vitrée à montants noirs",
+      "full": {
+        "path": "assets/chantiers/salle-bains-douche-20240624.webp",
+        "width": 901,
+        "height": 1600,
+        "bytes": 59408
+      },
+      "thumbnail": {
+        "path": "assets/chantiers/salle-bains-douche-20240624-apercu.webp",
+        "width": 507,
+        "height": 900,
+        "bytes": 21602
+      }
+    }
+  ]
+}

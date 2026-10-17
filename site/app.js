@@ -14,11 +14,42 @@ document.querySelectorAll('[data-email-link]').forEach(el => { el.href = 'mailto
   if (wanted && field && [...field.options].some(o => o.value === wanted)) field.value = wanted;
 }
 document.querySelectorAll('[data-service]').forEach(el => el.addEventListener('click', () => { const field=document.querySelector('#prestation'); if(field) field.value=el.dataset.service; }));
-document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => {
-  document.querySelectorAll('[data-filter]').forEach(b => { const active=b===button; b.classList.toggle('active',active); b.setAttribute('aria-pressed',String(active)); });
-  let count=0; document.querySelectorAll('.project').forEach(p => { p.hidden = button.dataset.filter !== 'all' && p.dataset.category !== button.dataset.filter; if(!p.hidden) count++; });
-  document.querySelector('.gallery-status').textContent=count + ' réalisation' + (count>1?'s':'') + ' affichée' + (count>1?'s':'');
-}));
+// Reveal six photos at a time, including within each category. Without JS,
+// every photo remains available and the extra control stays hidden.
+const gallery = document.querySelector('[data-gallery]');
+if (gallery) {
+  const projects = [...gallery.querySelectorAll('.project')];
+  const filters = [...document.querySelectorAll('[data-filter]')];
+  const more = document.querySelector('[data-gallery-more]');
+  const galleryStatus = document.querySelector('.gallery-status');
+  let category = 'all';
+  let shown = 6;
+  const matching = () => projects.filter(p => category === 'all' || p.dataset.category === category);
+  function renderGallery() {
+    const matches = matching();
+    const visible = new Set(matches.slice(0, shown));
+    projects.forEach(p => { p.hidden = !visible.has(p); });
+    galleryStatus.textContent = `${Math.min(shown, matches.length)} photo${matches.length > 1 ? 's' : ''} sur ${matches.length}`;
+    more.hidden = shown >= matches.length;
+  }
+  filters.forEach(button => button.addEventListener('click', () => {
+    category = button.dataset.filter;
+    shown = 6;
+    filters.forEach(b => {
+      const active = b === button;
+      b.classList.toggle('active', active);
+      b.setAttribute('aria-pressed', String(active));
+    });
+    renderGallery();
+  }));
+  more.addEventListener('click', () => {
+    const firstNewPhoto = matching()[shown];
+    shown += 6;
+    renderGallery();
+    firstNewPhoto?.focus({preventScroll: true});
+  });
+  renderGallery();
+}
 const lightbox=document.querySelector('#lightbox');
 let lastPhotoButton;
 document.querySelectorAll('[data-image]').forEach(button => button.addEventListener('click', () => {

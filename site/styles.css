@@ -350,3 +350,8 @@ nav.breadcrumb a { color: #183453; text-decoration: underline; text-underline-of
 .qr-help p { font-size: 15px; line-height: 1.75; margin-top: 12px; }
 .qr-help a { text-decoration: underline; text-underline-offset: 3px; }
 @media (display-mode: standalone) { .qr-help { display: none; } }
+
+/* Keep long photo collections comfortable to browse, especially on phones. */
+.gallery-more { display: flex; flex-direction: column; align-items: center; gap: 16px; margin-top: 36px; text-align: center; }
+.gallery-status { font-size: clamp(16px, 1.05vw, 18px); }
+.gallery-more .btn { gap: 24px; }

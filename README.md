@@ -73,6 +73,14 @@ La maquette est en `noindex` et `robots.txt` interdit l’exploration. Au lancem
 
 Photos de chantiers et supports transmis par Thibaut pour ce projet. Versions originales conservées hors du dépôt ; versions WebP optimisées dans `site/assets/`. Logo de la coopérative fourni. Le dessin solaire est une illustration CSS explicitement identifiée et ne représente pas un chantier.
 
+### Série de 17 photos reçue le 17 octobre 2026
+
+Les 17 originaux sont intégrés à la galerie de l’accueil (23 photos au total), avec les états existants et préparations légendés comme tels. Les vues de salles de bains et de chauffage complètent aussi leurs pages services. Les communes et les liens entre les photos n’étant pas confirmés, aucun comparatif avant/après ni lieu de chantier n’est inventé.
+
+Chaque photo dispose d’un aperçu WebP de 900 px maximum et d’un agrandissement de 1600 px maximum dans `site/assets/chantiers/`. L’orientation est corrigée, les métadonnées sont retirées ; le contenu de la photo est conservé. `docs/photos-2026-10-17.json` donne la correspondance des originaux, les légendes, dimensions et poids. Les aperçus sont chargés à la demande ; les fichiers d’agrandissement ne sont demandés qu’à l’ouverture d’une photo.
+
+La galerie affiche six photos, puis six supplémentaires par le bouton « Voir plus de photos ». Les filtres réinitialisent cette limite ; sans JavaScript, toutes les photos restent visibles.
+
 ## Seconde maquette — ajustements
 
 Le site ne prévoit plus de page Facebook. L’email public est toujours `msplomberie50@hotmail.com` ; les futurs envois de test restent destinés exclusivement à Localia. Illustration solaire et libellé séparés. Carte vectorielle animée Manche / Calvados avec départ à Périers et villes citées ; il ne s’agit ni d’une limite contractuelle de desserte ni d’un itinéraire routier. Mouvement réduit respecté.
