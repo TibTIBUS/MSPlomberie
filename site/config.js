@@ -1,0 +1,1 @@
+window.MSP_CONFIG = {"googleBusinessUrl": "", "googleReviewUrl": "", "mode": "production", "formEnabled": true, "contactEmail": "msplomberie50@hotmail.com", "demoReviewUrl": "https://tibtibus.github.io/MSPlomberie/avis.html", "siteUrl": "https://ms-plomberie-manche.fr", "indexable": true};

@@ -1,6 +1,7 @@
 dist/
-.openai/
+__pycache__/
 .env
 .env.*
-__pycache__/
-.DS_Store
+!.env.example
+.netlify/
+*.pem

@@ -1,0 +1,482 @@
+[
+  {
+    "path": "index.html",
+    "bytes": 64478,
+    "sha256": "95d5d8c46ce5bdc5a16248ce68ea1b184e01d97fd24ddec4331c9a1b19f5e60f",
+    "url": "https://ms-plomberie-manche.fr/"
+  },
+  {
+    "path": "apercu-responsive.html",
+    "bytes": 2901,
+    "sha256": "de863cdeee734f32d50916f560f0b6324a4403841767494c93bbfd33bc1ad99e",
+    "url": "https://ms-plomberie-manche.fr/apercu-responsive.html"
+  },
+  {
+    "path": "app.js",
+    "bytes": 7796,
+    "sha256": "9d522c663a561b468ca8a7e402a9ceb176b80760ab611661b6f81fd0498e17b0",
+    "url": "https://ms-plomberie-manche.fr/app.js"
+  },
+  {
+    "path": "config.js",
+    "bytes": 291,
+    "sha256": "1efd4814095fb9a01cc476a9d90ad78a33014e4f5591637f9fcd1b46405c3c84",
+    "url": "https://ms-plomberie-manche.fr/config.js"
+  },
+  {
+    "path": "qr-sw.js",
+    "bytes": 1582,
+    "sha256": "c3f7e07373c2de48814a993c6710ca7c4483083a52eed8aaf3d81e7467af0644",
+    "url": "https://ms-plomberie-manche.fr/qr-sw.js"
+  },
+  {
+    "path": "qr.html",
+    "bytes": 4202,
+    "sha256": "1692b151ade7b4348bf701f9bc9a1f6facd955609debaf89864db17427cc054c",
+    "url": "https://ms-plomberie-manche.fr/qr.html"
+  },
+  {
+    "path": "qr.webmanifest",
+    "bytes": 593,
+    "sha256": "4b0830211e7de15e912b6e844a27cf2bf6f788b6436f2d3dd4874a860820dc97",
+    "url": "https://ms-plomberie-manche.fr/qr.webmanifest"
+  },
+  {
+    "path": "robots.txt",
+    "bytes": 149,
+    "sha256": "0444ac1befca6e1220e5d23a111fdcf93945bf31945d810b06e7aeccda27b571",
+    "url": "https://ms-plomberie-manche.fr/robots.txt"
+  },
+  {
+    "path": "site.webmanifest",
+    "bytes": 560,
+    "sha256": "2e54047de19e97440cc40413e1c2ff6526b9c26450255780069ad8cb0b370679",
+    "url": "https://ms-plomberie-manche.fr/site.webmanifest"
+  },
+  {
+    "path": "sitemap.xml",
+    "bytes": 873,
+    "sha256": "459b5754197cc32e404df68882fb36f5098313ef44056a76c03b00d971c08f35",
+    "url": "https://ms-plomberie-manche.fr/sitemap.xml"
+  },
+  {
+    "path": "styles.css",
+    "bytes": 45521,
+    "sha256": "c59b3f15984893596a5131e8be3d92e05d5af7826ca6a873c2627ea9c2685d68",
+    "url": "https://ms-plomberie-manche.fr/styles.css"
+  },
+  {
+    "path": "assets/apple-touch-icon.png",
+    "bytes": 2928,
+    "sha256": "4959c82cc3969eb0c379afe6c9ce32e85e81a336aee36304ed34d308e7364eec",
+    "url": "https://ms-plomberie-manche.fr/assets/apple-touch-icon.png"
+  },
+  {
+    "path": "assets/avis-google.svg",
+    "bytes": 8582,
+    "sha256": "36a0d8b8394c854d2fcdd149587ac3639498df31ab5f82c9faf1779fbc12520d",
+    "url": "https://ms-plomberie-manche.fr/assets/avis-google.svg"
+  },
+  {
+    "path": "assets/ballon.webp",
+    "bytes": 40802,
+    "sha256": "9e13bd014d3d2327dcdc4e0084e532ab0d820822749632a9807bad70f6b38637",
+    "url": "https://ms-plomberie-manche.fr/assets/ballon.webp"
+  },
+  {
+    "path": "assets/chantiers/chantier-chauffage-20240618-apercu.webp",
+    "bytes": 131420,
+    "sha256": "2a4527dfba64e467e280c1a9d721297589c1e981cb9b46a579656864242513aa",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/chantier-chauffage-20240618-apercu.webp"
+  },
+  {
+    "path": "assets/chantiers/chaudiere-existante-20241216-apercu.webp",
+    "bytes": 35400,
+    "sha256": "e443ed77d9d6594ea5bab922e502391689d39a601cce368f479e9e860b7e7242",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/chaudiere-existante-20241216-apercu.webp"
+  },
+  {
+    "path": "assets/chantiers/chauffage-existant-20231030-apercu.webp",
+    "bytes": 29454,
+    "sha256": "cdcc1f2c773237a31288c2ca4e85f20aa4285d6c83e80240fcdcf39ed2184db6",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/chauffage-existant-20231030-apercu.webp"
+  },
+  {
+    "path": "assets/chantiers/equipement-atlantic-20240618-apercu.webp",
+    "bytes": 55964,
+    "sha256": "4c36341a8f0d06b322ab76101bb1ff99ab464191515473f6090d1a1df342f0e9",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/equipement-atlantic-20240618-apercu.webp"
+  },
+  {
+    "path": "assets/chantiers/installation-chauffage-20241217-apercu.webp",
+    "bytes": 56196,
+    "sha256": "8de93a8dc2e4ab7e1c85d8fbefeddba15631894cfb7df44aa3907a343f6eeb2f",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/installation-chauffage-20241217-apercu.webp"
+  },
+  {
+    "path": "assets/chantiers/local-technique-20240617-apercu.webp",
+    "bytes": 82398,
+    "sha256": "de5bbcfe8db554ded861f541420785c6db68ab9f5cc2aee980614d846c25efd6",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/local-technique-20240617-apercu.webp"
+  },
+  {
+    "path": "assets/chantiers/module-chauffage-20241024-apercu.webp",
+    "bytes": 41488,
+    "sha256": "89032efcaf05514ceba8b316e203edb6487e8c462961f0625e7e1afce932a125",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/module-chauffage-20241024-apercu.webp"
+  },
+  {
+    "path": "assets/chantiers/pac-exterieure-20241224-apercu.webp",
+    "bytes": 117542,
+    "sha256": "62fee08bb436edf0bc67c6ed851846e2be173d3de45b97b185d4fc864d30deb0",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/pac-exterieure-20241224-apercu.webp"
+  },
+  {
+    "path": "assets/chantiers/pac-fujitsu-atlantic-20261023.webp",
+    "bytes": 263568,
+    "sha256": "61906743a87de3f1686853ffd2cf9a60dc2c29f62f6399c0020c5d968950142f",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/pac-fujitsu-atlantic-20261023.webp"
+  },
+  {
+    "path": "assets/chantiers/pac-maison-pierre-20240618-apercu.webp",
+    "bytes": 136170,
+    "sha256": "5291d68081c61503b962a663e8f3f719f038592c65ef9bf224d530d523f1548a",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/pac-maison-pierre-20240618-apercu.webp"
+  },
+  {
+    "path": "assets/chantiers/piece-sanitaire-20240506-apercu.webp",
+    "bytes": 26978,
+    "sha256": "f9b268c097a95734fc602c3ec89ce68ea20f1bb84de388da776b317a3211caa2",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/piece-sanitaire-20240506-apercu.webp"
+  },
+  {
+    "path": "assets/chantiers/raccordements-chauffage-20241024-apercu.webp",
+    "bytes": 48438,
+    "sha256": "b8cfe53eb306bd93845833b6b6a7ab25a233387387c1de93680a6ba3bdca1873",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/raccordements-chauffage-20241024-apercu.webp"
+  },
+  {
+    "path": "assets/chantiers/reseaux-techniques-20240618-apercu.webp",
+    "bytes": 41258,
+    "sha256": "1c300e533264b894b34cf2456d21a4e01c359547724c5204984a2c5299631834",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/reseaux-techniques-20240618-apercu.webp"
+  },
+  {
+    "path": "assets/chantiers/salle-bains-chantier-20240510-apercu.webp",
+    "bytes": 22652,
+    "sha256": "1357fed3fe450127a79bb73e52a4c7140933e38b1f0709079458d0c9ddc62c2b",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/salle-bains-chantier-20240510-apercu.webp"
+  },
+  {
+    "path": "assets/chantiers/salle-bains-douche-20240624-apercu.webp",
+    "bytes": 21602,
+    "sha256": "b760d5a27b1f46e1782a112ab83477613d8107ba59da8e050f44ef0f8de489b1",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/salle-bains-douche-20240624-apercu.webp"
+  },
+  {
+    "path": "assets/chantiers/salle-bains-vasque-20240624-apercu.webp",
+    "bytes": 30296,
+    "sha256": "1fd8b3d17034ac23166033c4aca8dac44859245e72076f48d02416af29261cd3",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/salle-bains-vasque-20240624-apercu.webp"
+  },
+  {
+    "path": "assets/chantiers/salle-bains-vue-ensemble-20240624-apercu.webp",
+    "bytes": 24856,
+    "sha256": "63455abb4e6dbda9f1232455d41860fdc12067e0de51f2744d97840efdc9dfd2",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/salle-bains-vue-ensemble-20240624-apercu.webp"
+  },
+  {
+    "path": "assets/chantiers/sebastien-mauger-portrait-20261023.webp",
+    "bytes": 47136,
+    "sha256": "ffa190bc87e9b23d026ef3f677d6cb33e8cc933b4d7356d09d8cf8616a283e5f",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/sebastien-mauger-portrait-20261023.webp"
+  },
+  {
+    "path": "assets/chantiers/support-exterieur-20241218-apercu.webp",
+    "bytes": 174848,
+    "sha256": "15a4f390afb855e550616adbeeb6e7cac24d40ff0d6887860e222716fa99cc8d",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/support-exterieur-20241218-apercu.webp"
+  },
+  {
+    "path": "assets/chauffage-atlantic.webp",
+    "bytes": 159282,
+    "sha256": "5faeeee9bcc345b72015b299390d30b2942ceaae3acd41a8972a7a86b8c452c3",
+    "url": "https://ms-plomberie-manche.fr/assets/chauffage-atlantic.webp"
+  },
+  {
+    "path": "assets/cooperative.png",
+    "bytes": 93414,
+    "sha256": "e82513715fd5c05c75ced66474fe51bd47c24440624e61d74e17e653a20351e1",
+    "url": "https://ms-plomberie-manche.fr/assets/cooperative.png"
+  },
+  {
+    "path": "assets/douche.webp",
+    "bytes": 125718,
+    "sha256": "e979a6c0dd52f7196c4f6d59f432804d7f6cfdfecf6efa8d23f84a82b00d73d1",
+    "url": "https://ms-plomberie-manche.fr/assets/douche.webp"
+  },
+  {
+    "path": "assets/favicon.svg",
+    "bytes": 333,
+    "sha256": "5ed678913f5f0d24a1cb3f12d627d0adf3a8cd3e380d6b091208956c6cc7736c",
+    "url": "https://ms-plomberie-manche.fr/assets/favicon.svg"
+  },
+  {
+    "path": "assets/installation-daikin.webp",
+    "bytes": 46992,
+    "sha256": "69c7cc63098c8f6871209f62b091f162f15393b745ad9ce166ac3926a7d264d8",
+    "url": "https://ms-plomberie-manche.fr/assets/installation-daikin.webp"
+  },
+  {
+    "path": "assets/manrope.woff2",
+    "bytes": 28284,
+    "sha256": "690965c90bdfc4e4ba76f43c89c1ba6e9d78b672e7d2cd36a83760f46ef9b48f",
+    "url": "https://ms-plomberie-manche.fr/assets/manrope.woff2"
+  },
+  {
+    "path": "assets/pac-exterieure.webp",
+    "bytes": 338486,
+    "sha256": "37f05819e433b9b42c9b0dfc3c8a28eb07f9c1f2599395df8eb2e90ac80dc54c",
+    "url": "https://ms-plomberie-manche.fr/assets/pac-exterieure.webp"
+  },
+  {
+    "path": "assets/plancher-chauffant.webp",
+    "bytes": 217664,
+    "sha256": "8fbbedb10abaa2f99aee231c0da65bca314a1fbefb30e66fe1b1d25f780efee3",
+    "url": "https://ms-plomberie-manche.fr/assets/plancher-chauffant.webp"
+  },
+  {
+    "path": "assets/secteur-intervention.svg",
+    "bytes": 40751,
+    "sha256": "67b53924c29dc442a86a121840e0d3030b20ef5791ba2c3ca128bf79f0fe7282",
+    "url": "https://ms-plomberie-manche.fr/assets/secteur-intervention.svg"
+  },
+  {
+    "path": "assets/v2.css",
+    "bytes": 34708,
+    "sha256": "b7db499e073be819f020d591e0552bb2ae3d81140e844049ccab2febe983e3b2",
+    "url": "https://ms-plomberie-manche.fr/assets/v2.css"
+  },
+  {
+    "path": "assets/v2.js",
+    "bytes": 6358,
+    "sha256": "8d068d0aa32f770d652f65222e20d00dbe04395b35c5e5d1ab1fc847da47c28a",
+    "url": "https://ms-plomberie-manche.fr/assets/v2.js"
+  },
+  {
+    "path": "panneaux-solaires.html",
+    "bytes": 18427,
+    "sha256": "8dbd01c34d44cf35f10d8c5c7ef0b938fbc81042611b44583e7d378e4442a51a",
+    "url": "https://ms-plomberie-manche.fr/panneaux-solaires.html"
+  },
+  {
+    "path": "plombier-chauffagiste-carentan-les-marais.html",
+    "bytes": 17214,
+    "sha256": "1058fc8d0088ac07461e452c938900f4e31927b4afb2ee294255a86f07d4569a",
+    "url": "https://ms-plomberie-manche.fr/plombier-chauffagiste-carentan-les-marais.html"
+  },
+  {
+    "path": "plombier-chauffagiste-coutances.html",
+    "bytes": 16711,
+    "sha256": "68933748fc20a41d5dd26ef4f8ca91e093a864970b2c52832c883d2117b7902b",
+    "url": "https://ms-plomberie-manche.fr/plombier-chauffagiste-coutances.html"
+  },
+  {
+    "path": "plombier-chauffagiste-lessay.html",
+    "bytes": 16762,
+    "sha256": "5d54294be10c2e754394dfaab5888625f5ce7ecf783e15a71e7e2a93ca1fad84",
+    "url": "https://ms-plomberie-manche.fr/plombier-chauffagiste-lessay.html"
+  },
+  {
+    "path": "plombier-chauffagiste-periers.html",
+    "bytes": 17016,
+    "sha256": "e1ec9f135039e0cd8668934a7a5adbcdfe66ef26b238037c9f182f886ff94610",
+    "url": "https://ms-plomberie-manche.fr/plombier-chauffagiste-periers.html"
+  },
+  {
+    "path": "plombier-chauffagiste-saint-sauveur-villages.html",
+    "bytes": 16899,
+    "sha256": "709a0b4db3371f579865568fe7c3bd8e2ad5477439396d00cb03fba052699492",
+    "url": "https://ms-plomberie-manche.fr/plombier-chauffagiste-saint-sauveur-villages.html"
+  },
+  {
+    "path": "pompe-a-chaleur.html",
+    "bytes": 19781,
+    "sha256": "ec3238633beec0e903a47e795d93e22086b877e159f548837d7e2f86f6c85a57",
+    "url": "https://ms-plomberie-manche.fr/pompe-a-chaleur.html"
+  },
+  {
+    "path": "salle-de-bains.html",
+    "bytes": 20984,
+    "sha256": "c5c4fc008736f5adc340d3b0ca49c67bc214d75fe598519e7e45a95356544b4f",
+    "url": "https://ms-plomberie-manche.fr/salle-de-bains.html"
+  },
+  {
+    "path": "assets/chantiers/pac-exterieure-20241224.webp",
+    "bytes": 390494,
+    "sha256": "6d37e836d8aec48b2151076f7ed44d21742778aad011afad73df8d2a27e6ee57",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/pac-exterieure-20241224.webp"
+  },
+  {
+    "path": "assets/chantiers/salle-bains-douche-20240624.webp",
+    "bytes": 59408,
+    "sha256": "15497eb386e6319387b0a9b6269ec07aa24034aee774038d34cae86acf346e19",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/salle-bains-douche-20240624.webp"
+  },
+  {
+    "path": "assets/OFL-Manrope.txt",
+    "bytes": 4387,
+    "sha256": "58172e0c0fac2cda8a37b348164bb55e44b0e69051e557e92b1d3f6910141f7b",
+    "url": "https://ms-plomberie-manche.fr/assets/OFL-Manrope.txt"
+  },
+  {
+    "path": "assets/banniere-msplomberie.webp",
+    "bytes": 81188,
+    "sha256": "bbc71ce4ddfd1de6a792af7a784b4576962f529b2aeba6149698a829eb3b04be",
+    "url": "https://ms-plomberie-manche.fr/assets/banniere-msplomberie.webp"
+  },
+  {
+    "path": "assets/carte-msplomberie.webp",
+    "bytes": 81642,
+    "sha256": "fceb90eb751c014b44fa553d88080bbde478437048bb5bdf928e0e465b4a3236",
+    "url": "https://ms-plomberie-manche.fr/assets/carte-msplomberie.webp"
+  },
+  {
+    "path": "assets/chantiers/chantier-chauffage-20240618.webp",
+    "bytes": 449800,
+    "sha256": "93556d0bb2fdce6a4cc664c636b68717341127d9bfe5f56ebefb5bae62f1f2b2",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/chantier-chauffage-20240618.webp"
+  },
+  {
+    "path": "assets/chantiers/chaudiere-existante-20241216.webp",
+    "bytes": 89136,
+    "sha256": "d321932c4dbf1ee23a199919393c323d8b442307086f47f2ce690f52c9007244",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/chaudiere-existante-20241216.webp"
+  },
+  {
+    "path": "assets/chantiers/chauffage-existant-20231030.webp",
+    "bytes": 78628,
+    "sha256": "e72f5b69d3f6a35ec787d7c6584f2346c70624aab7f4b4e752b279c88df8b3f9",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/chauffage-existant-20231030.webp"
+  },
+  {
+    "path": "assets/chantiers/equipement-atlantic-20240618.webp",
+    "bytes": 137242,
+    "sha256": "04ccf342ed100b262afaa1ff0cfe949fa759fcf95e82cb9489e23bdc8de280f1",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/equipement-atlantic-20240618.webp"
+  },
+  {
+    "path": "assets/chantiers/installation-chauffage-20241217.webp",
+    "bytes": 168100,
+    "sha256": "d6be36cce9be9295a772b87d578ebaff25be9737996054391f0c375c9e0abf3d",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/installation-chauffage-20241217.webp"
+  },
+  {
+    "path": "assets/chantiers/local-technique-20240617.webp",
+    "bytes": 250746,
+    "sha256": "aa426a3c2ae389cc4cf26bce7b230ca94b5448987134c1715ad197a4ecc389a3",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/local-technique-20240617.webp"
+  },
+  {
+    "path": "assets/chantiers/module-chauffage-20241024.webp",
+    "bytes": 109352,
+    "sha256": "d1d369e87517493c9e1490f03b9ca40eae71401dd769cca6d4c33a910a2ea048",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/module-chauffage-20241024.webp"
+  },
+  {
+    "path": "assets/chantiers/pac-maison-pierre-20240618.webp",
+    "bytes": 471468,
+    "sha256": "809a7db567499ed2e0dea879dda46bfeba736a1d31b4dd197a03d3038f45038c",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/pac-maison-pierre-20240618.webp"
+  },
+  {
+    "path": "assets/chantiers/piece-sanitaire-20240506.webp",
+    "bytes": 81466,
+    "sha256": "2066a3a69a65416560e611820c87a619da32c2c5975b5dc0c2258e734bf59ef3",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/piece-sanitaire-20240506.webp"
+  },
+  {
+    "path": "assets/chantiers/raccordements-chauffage-20241024.webp",
+    "bytes": 118826,
+    "sha256": "4cbf8b393e3ef725801c6fea9a5016e751e5cdb1d83437d58101096040c3da1f",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/raccordements-chauffage-20241024.webp"
+  },
+  {
+    "path": "assets/chantiers/reseaux-techniques-20240618.webp",
+    "bytes": 102628,
+    "sha256": "57efe8a1dbc1b1d5027c06fdaa78e09a5c4d0a63f92f210c80c0e5ce6e162e92",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/reseaux-techniques-20240618.webp"
+  },
+  {
+    "path": "assets/chantiers/salle-bains-chantier-20240510.webp",
+    "bytes": 77122,
+    "sha256": "cf2d8f3dbeb6a73efdc19fec11d757d4beb802a5214fcc5f7a21de72b166fb2e",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/salle-bains-chantier-20240510.webp"
+  },
+  {
+    "path": "assets/chantiers/salle-bains-vasque-20240624.webp",
+    "bytes": 108650,
+    "sha256": "16e0a2014481141b32280314859351680139f85297d9153c243526d3e573cff1",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/salle-bains-vasque-20240624.webp"
+  },
+  {
+    "path": "assets/chantiers/salle-bains-vue-ensemble-20240624.webp",
+    "bytes": 85502,
+    "sha256": "162be581c6918719befd021ed772c3ed8a1058f7edb8579b52d3a55c3d63e391",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/salle-bains-vue-ensemble-20240624.webp"
+  },
+  {
+    "path": "assets/chantiers/support-exterieur-20241218.webp",
+    "bytes": 504958,
+    "sha256": "b4feeb0cabb138a3b4980ad0c97d7acee77dac813e630d2b02f6362490a1d304",
+    "url": "https://ms-plomberie-manche.fr/assets/chantiers/support-exterieur-20241218.webp"
+  },
+  {
+    "path": "assets/icon-192.png",
+    "bytes": 3357,
+    "sha256": "764821be9ee2056941e27881f49b1c628b13d7cac3ebdd4282702a61fd9773fe",
+    "url": "https://ms-plomberie-manche.fr/assets/icon-192.png"
+  },
+  {
+    "path": "assets/icon-512.png",
+    "bytes": 9115,
+    "sha256": "95ce92719c60f5a818911b26a4d8e22788b578bfd900c07fa77b102e8ede4391",
+    "url": "https://ms-plomberie-manche.fr/assets/icon-512.png"
+  },
+  {
+    "path": "assets/pac-interieure.webp",
+    "bytes": 102410,
+    "sha256": "604a29d24a475d180b0d89213dc5dd0e7163b78f455cb4e854601d872a63ecfd",
+    "url": "https://ms-plomberie-manche.fr/assets/pac-interieure.webp"
+  },
+  {
+    "path": "assets/salle-de-bains.webp",
+    "bytes": 93344,
+    "sha256": "ef92d1475aba985e68f53ffb4592ed437bbda36939c13615dc508b32e1349fa6",
+    "url": "https://ms-plomberie-manche.fr/assets/salle-de-bains.webp"
+  },
+  {
+    "path": "avis.html",
+    "bytes": 10515,
+    "sha256": "033b7cfb4cc9c8e880fdd645b701bab08ecedd8edc40dfeb265e164a0ae5aa61",
+    "url": "https://ms-plomberie-manche.fr/avis.html"
+  },
+  {
+    "path": "confidentialite.html",
+    "bytes": 3354,
+    "sha256": "cb22f608f9bfdad1299cbc5dd3289b2da47e2dd93ab4143e33773f19edf51b43",
+    "url": "https://ms-plomberie-manche.fr/confidentialite.html"
+  },
+  {
+    "path": "mentions-legales.html",
+    "bytes": 2517,
+    "sha256": "26eabbde00dfc378f7e5ffa606a1a5186ca757278ad4996dd899e2621cea9d03",
+    "url": "https://ms-plomberie-manche.fr/mentions-legales.html"
+  },
+  {
+    "path": "merci.html",
+    "bytes": 727,
+    "sha256": "6ef5630cb405adeac0f8b3d63f07fe05013e34f8076e8a6b974ce4ecfd0b7952",
+    "url": "https://ms-plomberie-manche.fr/merci.html"
+  }
+]

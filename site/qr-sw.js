@@ -2,8 +2,8 @@
 // build.py replaces the two placeholders with the exact versioned files of the
 // built page, so any change (e.g. the real Google review link) gives a new cache.
 'use strict';
-const CACHE = 'msp-qr-__QR_CACHE_VERSION__';
-const FILES = __QR_PRECACHE__;
+const CACHE = 'msp-qr-2958ee818341';
+const FILES = ["qr.html", "qr.webmanifest", "assets/icon-192.png", "assets/icon-512.png", "assets/favicon.svg", "assets/apple-touch-icon.png", "styles.css?v=c59b3f159848", "config.js?v=1efd4814095f", "app.js?v=9d522c663a56", "assets/avis-google.svg?v=36a0d8b8394c"];
 
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(FILES)).then(() => self.skipWaiting()));

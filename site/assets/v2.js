@@ -64,16 +64,19 @@ document.querySelectorAll('[data-open-dialog]').forEach(button=>button.addEventL
 const form=document.querySelector('#project-form');
 if(form){
   form.addEventListener('submit',e=>{
-    e.preventDefault();
     const status=document.querySelector('#form-status');status.textContent='';
     const file=form.elements.photo.files[0];
     if(file&&(!['image/jpeg','image/png','image/webp'].includes(file.type)||file.size>5*1024*1024)){
+      e.preventDefault();
       status.textContent='Choisissez une photo JPG, PNG ou WebP de moins de 5 Mo.';form.elements.photo.focus();return;
     }
-    if(!form.reportValidity())return;
+    if(!form.reportValidity()){e.preventDefault();return;}
+    if(config.formEnabled)return;
+    e.preventDefault();
     status.textContent='Votre demande est bien remplie. Cette version de présentation ne transmet aucun message. Vous pouvez écrire à Sébastien : msplomberie50@hotmail.com.';
     status.focus();
   });
+  if(config.formEnabled)document.querySelector('.form-preview')?.remove();
 }
 if(config.googleBusinessUrl&&/^https:\/\//.test(config.googleBusinessUrl)){
   document.querySelectorAll('[data-google-link]').forEach(link=>{link.href=config.googleBusinessUrl;link.hidden=false;});

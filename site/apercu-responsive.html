@@ -21,7 +21,7 @@
 <main><iframe src="./" title="Site msplomberie" id="site"></iframe></main>
 <script>
 const frame = document.querySelector('#site');
-const previewVersion = '__MSP_PREVIEW_VERSION__';
+const previewVersion = '366279812d5b';
 frame.src = `./?apercu=${previewVersion}`;
 document.querySelectorAll('[data-width]').forEach(button => button.addEventListener('click', () => {
   frame.style.width = `${button.dataset.width}px`;

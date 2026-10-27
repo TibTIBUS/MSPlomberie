@@ -21,3 +21,24 @@ dialog{border:0;border-radius:20px;padding:0;color:var(--ink);box-shadow:0 20px 
 
 .google-qr{flex:none;text-align:center;display:flex;flex-direction:column;align-items:center;gap:9px}.google-qr img{width:112px;height:112px;background:white;border-radius:8px}.google-qr a{font-size:14px;font-weight:700;text-decoration:underline;text-underline-offset:4px}.google-qr .pending{font-size:12px}
 @media(max-width:650px){.contact-copy{display:contents}.contact-copy>div:first-child{grid-row:1}.form-card{grid-row:2}.contact-details{grid-row:3;grid-column:1;margin-top:0}.contact-aside{grid-row:4;grid-column:1;margin-top:0}.google-qr{align-self:center}}
+
+.secteur-villes{margin:.7rem 0 0;font-size:.95rem;color:#b9c6d6}
+.secteur-villes a{color:#bcd3f5;text-decoration:none}
+.secteur-villes a:hover{text-decoration:underline}
+.ville .breadcrumb{margin-bottom:1rem}
+.ville h1{margin:.4rem 0 .8rem}
+.ville .lead{margin:0 0 1.2rem}
+.ville h2{margin:1.7rem 0 .6rem;font-size:1.4rem}
+.ville p{margin:.55rem 0}
+.ville ul{margin:.5rem 0 .8rem;padding-left:1.2rem}
+.ville li{margin:.3rem 0}
+ul.check{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.15rem 1.6rem}
+ol.etapes{margin:.5rem 0 .8rem;padding-left:1.3rem}
+ol.etapes li{margin:.45rem 0}
+.ville details{margin:.5rem 0;padding:.65rem 1rem;border:1px solid #e0e6ee;border-radius:12px}
+.ville summary{cursor:pointer;font-weight:600;color:#183453}
+.ville details p{margin:.45rem 0 0}
+.ville-map{margin:1.6rem 0}
+.ville-map img{width:100%;max-width:520px;height:auto;border-radius:12px;border:1px solid #e0e6ee}
+.ville-map figcaption{margin-top:.4rem;font-size:.9rem;color:#536274}
+.ville-cta{margin:1.8rem 0 .5rem}

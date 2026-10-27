@@ -1,3 +1,6 @@
+[functions]
+  directory = "netlify/functions"
+
 [build]
   command = "python3 scripts/build.py"
   publish = "dist"
@@ -28,5 +31,10 @@
 
 [[headers]]
   for = "/qr.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json"
+
+[[headers]]
+  for = "/site.webmanifest"
   [headers.values]
     Content-Type = "application/manifest+json"

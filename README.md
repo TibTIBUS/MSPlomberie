@@ -1,96 +1,39 @@
-# msplomberie — site vitrine
+# MS Plomberie
 
-Maquette du site de Sébastien Mauger, artisan à Périers. Code statique sans framework, compatible GitHub Pages puis Netlify. Les photos et les deux supports corrigés sont intégrés localement, sans chargement depuis une banque d’images externe.
+Site de production : https://ms-plomberie-manche.fr/
 
-## Construction
+## Sauvegarde du 27 octobre 2026
 
-```bash
-python3 -m pip install -r requirements.txt
+Le dossier `site/` conserve les fichiers publics recuperes sur la production du 27 octobre a 11h00. Il est maintenant la source statique editable. Les empreintes dans `docs/published-files-20261027.json` permettent de verifier cet etat de reference.
+
+Les sources des deux fonctions Netlify (`chat.js` et `form-submitted.js`) ont ete recuperees depuis leurs versions et correctifs prepares pour cette publication. Leur syntaxe et le controle JWS/routage mail ont ete testes localement. Elles n'ont pas ete comparees octet par octet aux bundles executes chez Netlify.
+
+Les anciens scripts de generation n'ont pas pu etre retablis integralement. `build.py` et `check.py` sont donc de nouveaux scripts de preparation explicitement bases sur la copie publiee, sans nouvelle generation de contenu. L'historique anterieur reste dans Git.
+
+## Preparation locale, sans publication
+
+Apercu protege, formulaire et assistant IA desactives, noindex et connexions bloquees :
+
+```sh
 python3 scripts/build.py
+python3 scripts/check.py
 ```
 
-Le résultat est dans `dist/`. Le workflow `.github/workflows/pages.yml` construit et publie la branche `main` sur GitHub Pages. Dans **Settings → Pages → Source**, choisir **GitHub Actions** si GitHub n’a pas pu activer Pages automatiquement.
+Copie de production, identique aux 80 fichiers publics recuperes :
 
-Netlify : importer ce dépôt ; le fichier `netlify.toml` définit la commande et le dossier publié. Ne pas publier le répertoire `site/` directement : la construction applique les protections de la maquette.
+```sh
+MSP_MODE=production python3 scripts/build.py
+python3 scripts/check.py
+```
 
-## Contact : trois étapes distinctes
+La sortie est dans `dist/`. Ces commandes ne publient rien et ne font aucun appel reseau. Pour modifier le site, modifier `site/`, tester localement puis mettre a jour les empreintes apres validation de la modification. Ne jamais recopier une ancienne source V1 sur cette V2.
 
-- **Maquette / GitHub Pages** : `preview`, aucun envoi et aucune collecte. Le bouton vérifie le formulaire sans transmettre. L’adresse publique affichée reste celle de Sébastien, indépendamment du mode de test.
-- **Essais Netlify** : activer Forms, configurer les notifications **uniquement vers `gestion.localia@gmail.com`**, puis définir `MSP_MODE=test` et redéployer. Vérifier la réception d’un vrai test et le Reply-To.
-- **Production** : après validation, routage **To: `msplomberie50@hotmail.com`**, **Cc: `gestion.localia@gmail.com`**, et `Reply-To` vers le visiteur. Les notifications natives Netlify peuvent avertir plusieurs destinataires ; une véritable en-tête Cc devra être configurée via le mécanisme d’envoi choisi, puis testée avant activation. Ne pas considérer que `MSP_MODE` configure les notifications : il ne le fait pas.
+## Publication et configuration privee
 
-Le mode par défaut reste `preview`, même pour un déploiement Netlify appelé « production ». Ne définir `MSP_MODE=production` qu’après avoir finalisé le routage des emails et les pages légales/confidentialité. Aucune adresse destinataire n’est acceptée depuis les champs du formulaire. Photo facultative : un fichier JPG/PNG/WebP de 5 Mo maximum. Contrôle de format et de taille côté navigateur, honeypot et filtrage Netlify ; valider les exigences côté serveur avant le lancement.
+Netlify n'est pas relie a ce depot. Le workflow GitHub Pages ne doit jamais se lancer sur un push. Toute publication est une action manuelle distincte qui demande un accord, y compris ses couts.
 
-## Google Business et QR code
+Les variables MISTRAL_API_KEY, RESEND_API_KEY et WEBHOOK_JWS_SECRET restent dans la configuration privee Netlify et ne sont jamais conservees dans Git. Le webhook de notification Forms doit rester limite au formulaire et signe JWS. Les destinataires ne sont pas pris depuis les champs libres du formulaire. Le routage des tests reste distinct du routage reel. Aucun test automatique ne doit envoyer de mail a l'artisan.
 
-Compléter dans `site-config.json` les liens HTTPS :
+La copie statique seule ne remplace pas la configuration privee Netlify (variables, formulaires, webhook et domaine). Ne pas modifier ces reglages pour une simple sauvegarde de code.
 
-- `googleBusinessUrl` : future fiche Google (le lien « Notre fiche Google » apparaît alors dans les coordonnées) ;
-- `googleReviewUrl` : lien officiel « Demander des avis » fourni par la fiche Google.
-
-Puis reconstruire. Le QR code SVG est généré localement vers ce lien exact. Tant que le lien Google est vide, un QR de démonstration mène à `demoReviewUrl` et porte la mention DÉMONSTRATION. Aucun avis Google n’est simulé. L’invitation demande un avis sincère à tous les clients.
-
-Le QR n’est plus affiché sur l’accueil : c’est un outil pour Sébastien, accessible par deux pages non indexées et absentes du menu.
-
-- **`qr.html` — écran de téléphone.** Le QR en plein écran, installable sur l’écran d’accueil (icône « Avis msplomberie », manifeste `qr.webmanifest`). Après une première ouverture avec du réseau, il s’affiche sans connexion grâce à `qr-sw.js` (portée limitée à `qr.html`, réseau d’abord puis copie locale). L’écran reste allumé tant que la page est ouverte. Quand `googleReviewUrl` est renseigné, un bouton « Envoyer le lien au client » ouvre le partage du téléphone (ou un SMS). Les consignes d’installation iPhone / Android sont sur la page elle-même.
-- **`avis.html` — affiche à imprimer**, avec téléchargement du QR.
-
-Le build remplit `qr-sw.js` avec la liste exacte des fichiers versionnés de `qr.html` : quand le lien Google change, le cache change aussi et le téléphone récupère le nouveau code à la prochaine ouverture avec du réseau.
-
-## Pages et référencement
-
-- Accueil : le H1 contient « Plombier-chauffagiste à Périers » (même rendu visuel qu’avant), données structurées `Plumber` / `HVACBusiness` et `FAQPage`.
-- Pages services : `pompe-a-chaleur.html`, `panneaux-solaires.html`, `salle-de-bains.html`. Même charte, contenus limités au brief validé, données structurées `Service`, `BreadcrumbList` et `FAQPage`. Leurs boutons ouvrent le formulaire de l’accueil avec la prestation déjà choisie (`./?prestation=…#contact`).
-- Dans le JSON-LD, une valeur `site:/chemin` devient une URL absolue quand `siteUrl` est renseigné ; sans `siteUrl`, elle est retirée.
-
-### Mise en ligne indexable
-
-1. Renseigner `siteUrl` (ex. `https://msplomberie.fr`, sans chemin) : le build ajoute les balises canonical et `og:url`, et complète le JSON-LD.
-2. Passer `indexable` à `true`. L’indexation n’est ouverte que sur Netlify avec `MSP_MODE=production` : `noindex` est retiré des pages publiques, `robots.txt` autorise l’exploration (sauf les outils) et `sitemap.xml` est généré. GitHub Pages reste toujours en `noindex`.
-3. Avant cela : mentions légales et confidentialité finalisées, car elles deviennent indexables.
-
-`scripts/check.py` vérifie aussi un H1 unique mentionnant Périers, le titre, la description, le JSON-LD, les liens vers les pages services, le manifeste et le cache hors ligne du QR. Il tourne dans le workflow GitHub Pages après le build.
-
-## Brief validé
-
-- Nom : **msplomberie**, un seul p. Artisan : Sébastien Mauger, 14 ans dans le métier et activité créée depuis 5 ans (témoignage reçu en octobre 2026).
-- Localisation : 16, cité Jean-Baptiste Pasturel, 50190 Périers. Téléphone : 07 78 81 84 21. Email : **msplomberie50@hotmail.com**.
-- Priorités : pompes à chaleur et photovoltaïque. But principal : plus de demandes écrites, moins d’interruptions au téléphone.
-- Autres prestations : ballons thermodynamiques, chaudières gaz, planchers chauffants, salles de bains, rénovation plomberie, évacuations, dépannage sanitaire.
-- **Exclus : pose, entretien et ramonage des poêles à granulés.** Les supports utilisés sont les versions corrigées.
-- Solaire : toiture en surimposition ou supports au sol, autoconsommation, batteries, dimensionnement, rentabilité, déclaration préalable en mairie. Entreprise de couverture associée pour la toiture.
-- Horaires : lundi à vendredi, 8 h–12 h / 13 h 30–17 h ; fermé le week-end.
-- Secteur : Manche et Calvados ; notamment Périers, Saint-Lô, Valognes et Granville.
-- Membre des Chantiers de Demain : logo et lien vers la fiche de la coopérative dans la présentation et le pied de page.
-
-## À confirmer avant lancement
-
-Identité juridique, SIRET et mentions professionnelles ; justificatifs à jour RGE / QualiPV avec périmètres exacts ; conditions CEE / MaPrimeRénov’ et délégation de paiement ; droits de publication des photos ; conditions des devis ; liens sociaux ; description et communes des chantiers ; informations de traitement et conservation des données. Pas de promesse d’aides automatiques ni d’avis inventés.
-
-La maquette est en `noindex` et `robots.txt` interdit l’exploration. Au lancement validé, suivre « Mise en ligne indexable » ci-dessus.
-
-## Sources des visuels
-
-Photos de chantiers et supports transmis par Thibaut pour ce projet. Versions originales conservées hors du dépôt ; versions WebP optimisées dans `site/assets/`. Logo de la coopérative fourni. Le dessin solaire est une illustration CSS explicitement identifiée et ne représente pas un chantier.
-
-### Série de 17 photos reçue le 17 octobre 2026
-
-Les 17 originaux sont intégrés à la galerie de l’accueil (23 photos au total), avec les états existants et préparations légendés comme tels. Les vues de salles de bains et de chauffage complètent aussi leurs pages services. Les communes et les liens entre les photos n’étant pas confirmés, aucun comparatif avant/après ni lieu de chantier n’est inventé.
-
-Chaque photo dispose d’un aperçu WebP de 900 px maximum et d’un agrandissement de 1600 px maximum dans `site/assets/chantiers/`. L’orientation est corrigée, les métadonnées sont retirées ; le contenu de la photo est conservé. `docs/photos-2026-10-17.json` donne la correspondance des originaux, les légendes, dimensions et poids. Les aperçus sont chargés à la demande ; les fichiers d’agrandissement ne sont demandés qu’à l’ouverture d’une photo.
-
-La galerie affiche six photos, puis six supplémentaires par le bouton « Voir plus de photos ». Les filtres réinitialisent cette limite ; sans JavaScript, toutes les photos restent visibles.
-
-## Seconde maquette — ajustements
-
-Le site ne prévoit plus de page Facebook. L’email public est toujours `msplomberie50@hotmail.com` ; les futurs envois de test restent destinés exclusivement à Localia. Illustration solaire et libellé séparés. Carte vectorielle animée Manche / Calvados avec départ à Périers et villes citées ; il ne s’agit ni d’une limite contractuelle de desserte ni d’un itinéraire routier. Mouvement réduit respecté.
-
-Source du fond : [Contours administratifs Etalab / IGN 2026](https://etalab-datasets.geo.data.gouv.fr/contours-administratifs/2026/geojson/departements-1000m.geojson), Licence Ouverte. Centres des communes : [API Découpage administratif](https://geo.api.gouv.fr/). Carte dérivée locale dans `site/assets/secteur-intervention.svg`, sans chargement de cartes ou de traceurs tiers.
-
-Pour la revue des formats, `apercu-responsive.html` affiche le site dans un cadre de 360, 390, 768 ou 1280 pixels. Cette page de contrôle est non indexable et absente de la navigation publique.
-
-## Lisibilité et carte — révision du 16 octobre
-
-Sur PC, les paragraphes passent à 18–20 px et les textes secondaires à 16–18 px avec `clamp()`. Les textes, la palette et la structure sont conservés. Icônes SVG au trait fin : flèche droite pour les liens internes, oblique pour les liens externes. Apparition unique des sections, zoom léger des photos et transitions des boutons ; les mouvements sont désactivés avec `prefers-reduced-motion`.
-
-La carte emploie désormais les contours Etalab / IGN 2026 à 100 m, afin de conserver la pointe de Granville. Le repère de Granville correspond au [centre-ville, cours Jonville, publié par la Ville](https://www.ville-granville.fr/locations/centre-ville/) : longitude −1.5965029, latitude 48.8379787. Le centre géographique de la commune, qui comprend Chausey, ne convient pas comme repère urbain. `python3 scripts/refresh-map.py` actualise le SVG depuis la source officielle ; `scripts/check.py` vérifie que les quatre repères sont sur la terre ferme.
+Attention au formulaire : Netlify transforme le HTML lors de la publication. La copie recuperee conserve ce HTML publie. Avant une future republication, verifier les attributs de detection Netlify Forms et le formulaire cache necessaire, puis refaire un vrai test autorise. Cette sauvegarde n'autorise pas une republication sans controle.
