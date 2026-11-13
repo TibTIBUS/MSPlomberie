@@ -123,7 +123,7 @@ export async function onRequestPost(context) {
     const isTest = /^\s*\[TEST-MSP\]/i.test(message);
     const toVar = isTest ? (env.NOTIFY_TO_TEST || 'contact@localiapro.fr')
                          : (env.NOTIFY_TO_PROD || 'msplomberie50@hotmail.com');
-    const ccVar = isTest ? '' : (env.NOTIFY_CC_PROD || 'contact@localiapro.fr');
+    const ccVar = isTest ? '' : (env.NOTIFY_CC_PROD || 'contact@thibautmarie-web.fr');
     const to = toVar.split(',').map(s => s.trim()).filter(Boolean);
     const cc = ccVar.split(',').map(s => s.trim()).filter(Boolean);
     const submissionId = (crypto.randomUUID ? crypto.randomUUID() : String(Date.now()));
