@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /qr.html
-Disallow: /avis.html
-Disallow: /apercu-responsive.html
-Sitemap: https://ms-plomberie-manche.fr/sitemap.xml

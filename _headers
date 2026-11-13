@@ -1,0 +1,18 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+/assets/*
+  Cache-Control: public, max-age=86400
+
+/qr-sw.js
+  Cache-Control: no-cache
+  Service-Worker-Allowed: /
+
+/qr.webmanifest
+  Content-Type: application/manifest+json
+
+/site.webmanifest
+  Content-Type: application/manifest+json
