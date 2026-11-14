@@ -42,3 +42,6 @@ ol.etapes li{margin:.45rem 0}
 .ville-map img{width:100%;max-width:520px;height:auto;border-radius:12px;border:1px solid #e0e6ee}
 .ville-map figcaption{margin-top:.4rem;font-size:.9rem;color:#536274}
 .ville-cta{margin:1.8rem 0 .5rem}
+
+/* Photovoltaïque : partenaire déclarations, variante validée le 14/11/2026. */
+.solar-partner{background:#f5f7ef;border:1px solid #d7dfce;border-radius:24px;padding:36px;display:grid;grid-template-columns:270px 1fr;gap:40px;align-items:center;margin:0 0 44px}.solar-partner-logo{background:#fff;padding:20px;border-radius:14px}.solar-partner img{display:block;width:100%;height:auto}.solar-partner h2{font-size:32px;line-height:1.2;margin:10px 0 16px}.solar-partner p{margin:0 0 20px}.solar-partner .eyebrow{font-size:13px;letter-spacing:1.2px}.solar-partner .button{min-height:56px}.service-detail-grid a{text-decoration:underline;text-underline-offset:3px;font-weight:700}@media(max-width:650px){.solar-partner{grid-template-columns:1fr;padding:24px;gap:24px}.solar-partner-logo{max-width:230px}.solar-partner h2{font-size:27px}.solar-partner .button{max-width:100%;font-size:14px}}
