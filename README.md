@@ -7,6 +7,6 @@ Site statique hébergé sur Cloudflare Pages (depuis nov. 2026 ; auparavant Netl
 - `functions/api/contact.js` : formulaire de contact (envoi via Resend, clé en variable d'environnement).
 - `_headers` : en-têtes HTTP de sécurité et cache.
 - Aucune clé ni secret dans ce dépôt : tout est en variables d'environnement Cloudflare.
-- Convention : un message de formulaire commençant par `[TEST-MSP]` est un essai, envoyé à contact@localiapro.fr uniquement (jamais chez le client).
+- Convention : un message de formulaire commençant par `[TEST-MSP]` est un essai, envoyé à contact@thibautmarie-web.fr uniquement (jamais chez le client).
 
 Pour modifier un texte ou une photo : éditer le fichier sur GitHub puis déployer (voir avec Thibaut / Instinct).
